@@ -1,0 +1,28 @@
+{
+  "name": "smetika-landing-backend",
+  "version": "1.0.0",
+  "description": "MVP backend for the Smetika landing page lead form",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test tests/*.test.js",
+    "hash-password": "node scripts/hash-password.js"
+  },
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "connect-pg-simple": "^10.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^8.0.7",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.1"
+  }
+}
