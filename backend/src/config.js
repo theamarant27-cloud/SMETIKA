@@ -67,7 +67,7 @@ function buildConfig() {
     smtpSecure: readBool("SMTP_SECURE", false),
     smtpUser: process.env.SMTP_USER || "",
     smtpPass: process.env.SMTP_PASS || "",
-    smtpFrom: process.env.SMTP_FROM || "hello@smetika.pro",
+    smtpFrom: process.env.SMTP_FROM || "daniil@smetika.pro",
     notificationEmailTo: process.env.NOTIFICATION_EMAIL_TO || "",
     paginationPageSize: 20
   };
