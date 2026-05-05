@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-
-<html lang="ru" style=""><head></head><body class="text-on-background font-body-md antialiased overflow-x-hidden"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<html lang="ru" style=""><head><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="text-on-background font-body-md antialiased overflow-x-hidden">
+<svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Smetika — смета на потолки Armstrong за 5 минут по PDF-чертежу</title>
@@ -19,7 +23,7 @@
         }
         body {
             background-color: theme('colors.background');
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 10%, rgba(211, 228, 254, 0.4) 0%, transparent 40%),
                 radial-gradient(circle at 85% 30%, rgba(255, 218, 214, 0.4) 0%, transparent 40%),
                 radial-gradient(circle at 50% 80%, rgba(211, 228, 254, 0.3) 0%, transparent 50%);
@@ -34,67 +38,67 @@
     </style>
 <!-- [1] HEADER -->
 <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm transition-all duration-200">
-<div class="max-w-[1200px] mx-auto h-20 px-8 flex justify-between items-center w-full">
-<a class="text-2xl font-black text-on-surface" href="#" style="letter-spacing: 0.25em;">SMETIKA</a>
+<div class="max-w-[1200px] mx-auto h-16 md:h-20 px-4 md:px-8 flex justify-between items-center w-full">
+<a class="text-xl md:text-2xl font-black text-on-surface" href="#" style="letter-spacing: 0.25em;">SMETIKA</a>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#how-it-works" style="">Как работает</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#features" style="">Возможности</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#pricing" style="">Тарифы</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#faq" style="">FAQ</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#how-it-works">Как работает</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#features">Возможности</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#pricing">Тарифы</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#faq">FAQ</a>
 </nav>
-<a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-secondary-container text-on-primary font-label-sm text-label-sm rounded-lg shadow-[0_0_15px_rgba(253,99,82,0.3)] hover:shadow-[0_0_20px_rgba(253,99,82,0.5)] transition-all duration-300" href="#cta" style="">
-                Получить расчёт ٭</a>
-<button class="md:hidden text-on-surface p-2" style="">
-<span class="material-symbols-outlined" style="">menu</span>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-secondary-container text-on-primary font-label-sm text-label-sm rounded-lg shadow-[0_0_15px_rgba(253,99,82,0.3)] hover:shadow-[0_0_20px_rgba(253,99,82,0.5)] transition-all duration-300" href="#cta">
+                Получить расчёт ٭</a>
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </header>
 <main>
 <!-- [2] HERO -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter pt-20 pb-xxl flex flex-col md:flex-row items-center gap-xl">
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter pt-12 md:pt-20 pb-12 md:pb-xxl flex flex-col md:flex-row items-center gap-8 md:gap-xl">
 <div class="flex-1 text-center md:text-left z-10">
-<span class="inline-block py-1.5 px-4 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm mb-6 border border-inverse-primary/30 shadow-sm" style="">
+<span class="inline-block py-1.5 px-4 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-[12px] md:text-label-sm mb-6 border border-inverse-primary/30 shadow-sm">
                     Уже используют подрядчики по всей России
                 </span>
-<h1 class="font-display text-display text-on-background mb-6" style="">
-                    Смета Armstrong за 5 минут.<br/><span class="text-secondary-container" style="">Без ручного счёта.</span>
+<h1 class="font-display text-4xl md:text-display text-on-background mb-4 md:mb-6 leading-tight">
+                    Смета Armstrong за 5 минут.<br/><span class="text-secondary-container">Без ручного счёта.</span>
 </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto md:mx-0" style="">Загрузите архитектурный PDF-чертёж... и наш AI выдаст готовую Excel-смету за 3–20 минут с точностью до 95%.</p>
+<p class="font-body-lg text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-10 max-w-2xl mx-auto md:mx-0">Загрузите архитектурный PDF-чертёж... и наш AI выдаст готовую Excel-смету за 3–20 минут с точностью до 95%.</p>
 <div class="flex flex-col gap-4 mb-8">
-<div class="flex flex-col sm:row items-center gap-4 justify-center md:justify-start">
-<a class="inline-flex items-center justify-center px-8 py-4 bg-secondary-container text-on-primary font-label-sm text-label-sm rounded-lg shadow-[0_0_20px_rgba(253,99,82,0.4)] hover:shadow-[0_0_25px_rgba(253,99,82,0.6)] transition-all duration-300 w-full sm:w-auto" href="#cta" style="">Получить мой бесплатный расчёт
+<div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start w-full">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-secondary-container text-on-primary font-label-sm text-label-sm rounded-lg shadow-[0_0_20px_rgba(253,99,82,0.4)] hover:shadow-[0_0_25px_rgba(253,99,82,0.6)] transition-all duration-300 w-full sm:w-auto" href="#cta">Получить мой бесплатный расчёт
                         </a>
 </div>
 </div>
-<div class="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-start text-on-surface-variant font-label-sm text-label-sm mt-2">
-<span class="flex items-center gap-1.5" style="">
-<span class="material-symbols-outlined text-green-500 text-[18px] font-bold" style="">check_circle</span>
-<span class="" style="">Результат за 3-20 мин</span>
+<div class="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 justify-center md:justify-start text-on-surface-variant font-label-sm text-xs md:text-label-sm mt-2">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-500 text-[16px] md:text-[18px] font-bold">check_circle</span>
+<span>Результат за 3-20 мин</span>
 </span>
-<span class="flex items-center gap-1.5" style="">
-<span class="material-symbols-outlined text-green-500 text-[18px] font-bold" style="">check_circle</span>
-<span class="" style="">Точность ±95%</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-500 text-[16px] md:text-[18px] font-bold">check_circle</span>
+<span>Точность ±95%</span>
 </span>
-<span class="flex items-center gap-1.5" style="">
-<span class="material-symbols-outlined text-green-500 text-[18px] font-bold" style="">check_circle</span>
-<span class="" style="">Ваши данные не уходят         <br/></span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-500 text-[16px] md:text-[18px] font-bold">check_circle</span>
+<span>Ваши данные не уходят</span>
 </span>
 </div>
 </div>
-<div class="flex-1 w-full max-w-lg relative z-10 mt-10 md:mt-0">
-<div class="relative w-full aspect-square rounded-2xl bg-white/60 backdrop-blur-xl border border-white/50 shadow-[0_20px_40px_rgba(11,28,48,0.05)] p-6 overflow-hidden flex flex-col">
-<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4 mb-4">
+<div class="flex-1 w-full max-w-lg relative z-10 mt-6 md:mt-0">
+<div class="relative w-full aspect-square rounded-2xl bg-white/60 backdrop-blur-xl border border-white/50 shadow-[0_20px_40px_rgba(11,28,48,0.05)] p-4 md:p-6 overflow-hidden flex flex-col">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3 md:pb-4 mb-3 md:mb-4">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary-container fill" style="">picture_as_pdf</span>
-<span class="font-label-sm text-label-sm text-on-surface" style="">План_этажа.pdf</span>
+<span class="material-symbols-outlined text-secondary-container fill">picture_as_pdf</span>
+<span class="font-label-sm text-xs md:text-label-sm text-on-surface">План_этажа.pdf</span>
 </div>
-<span class="text-xs text-on-surface-variant bg-surface-container px-2 py-1 rounded" style="">Обработка...</span>
+<span class="text-[10px] md:text-xs text-on-surface-variant bg-surface-container px-2 py-1 rounded">Обработка...</span>
 </div>
 <div class="flex-1 relative">
 <div class="absolute inset-0 bg-surface-container-low rounded-lg border border-outline-variant/30 overflow-hidden flex items-center justify-center">
-<svg class="opacity-20" height="100%" viewbox="0 0 400 400" width="100%" xmlns="http://www.w3.org/2000/svg">
+<svg class="opacity-20" height="100%" viewBox="0 0 400 400" width="100%" xmlns="http://www.w3.org/2000/svg">
 <defs>
-<pattern height="20" id="grid" patternunits="userSpaceOnUse" width="20">
+<pattern height="20" id="grid" patternUnits="userSpaceOnUse" width="20">
 <rect fill="none" height="20" stroke="#131b2e" stroke-width="0.5" width="20"></rect>
 </pattern>
 </defs>
@@ -105,15 +109,15 @@
 </svg>
 <div class="absolute top-0 left-0 w-full h-1 bg-secondary-container shadow-[0_0_10px_#fd6352] animate-[scan_3s_ease-in-out_infinite]"></div>
 </div>
-<div class="absolute -right-4 -bottom-4 w-48 bg-white rounded-lg shadow-lg border border-outline-variant/40 p-3 transform rotate-[-2deg]">
+<div class="absolute -right-2 md:-right-4 -bottom-2 md:-bottom-4 w-40 md:w-48 bg-white rounded-lg shadow-lg border border-outline-variant/40 p-2 md:p-3 transform rotate-[-2deg]">
 <div class="flex items-center gap-2 mb-2">
-<span class="material-symbols-outlined text-green-600 fill" style="">table_view</span>
-<span class="font-label-sm text-[10px] text-on-surface font-semibold" style="">Смета_Armstrong.xlsx</span>
+<span class="material-symbols-outlined text-green-600 fill text-sm md:text-base">table_view</span>
+<span class="font-label-sm text-[8px] md:text-[10px] text-on-surface font-semibold">Смета_Armstrong.xlsx</span>
 </div>
-<div class="text-[10px] text-green-600 font-bold mb-1" style="">Готово за 4м 12с</div>
+<div class="text-[8px] md:text-[10px] text-green-600 font-bold mb-1">Готово за 4м 12с</div>
 <div class="space-y-1">
-<div class="h-2 w-full bg-surface-container rounded"></div>
-<div class="h-2 w-4/5 bg-surface-container rounded"></div>
+<div class="h-1.5 md:h-2 w-full bg-surface-container rounded"></div>
+<div class="h-1.5 md:h-2 w-4/5 bg-surface-container rounded"></div>
 </div>
 </div>
 </div>
@@ -121,383 +125,389 @@
 </div>
 </section>
 <!-- [3] PAIN -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter py-xxl" id="pain">
-<div class="text-center mb-16">
-<h2 class="font-h2 text-h2 text-on-background mb-4" style="">Вы теряете заказы, пока считаете смету</h2>
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter py-12 md:py-xxl" id="pain">
+<div class="text-center mb-10 md:mb-16">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background mb-4">Вы теряете заказы, пока считаете смету</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="bg-white rounded-xl border border-tertiary-fixed-dim/50 shadow-sm p-8">
-<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-6">
-<span class="material-symbols-outlined" style="">schedule</span>
+<div class="bg-white rounded-xl border border-tertiary-fixed-dim/50 shadow-sm p-6 md:p-8">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-4 md:mb-6">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">schedule</span>
 </div>
-<h3 class="font-h3 text-h3 text-on-surface mb-3" style="">Расчёт занимает 3–4 дня</h3>
-<p class="font-body-md text-sm text-on-surface-variant" style="">Ты открываешь чертёж и садишься за Excel: снимаешь площади, считаешь раскладку, вбиваешь помещение за помещением. Но пока ты считаешь — конкурент уже отправил КП. И клиент подписал договор с ним. А ты узнал об этом в пятницу вечером.</p>
+<h3 class="font-h3 text-xl md:text-h3 text-on-surface mb-2 md:mb-3">Расчёт занимает 3–4 дня</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Ты открываешь чертёж и садишься за Excel: снимаешь площади, считаешь раскладку, вбиваешь помещение за помещением. Но пока ты считаешь — конкурент уже отправил КП. И клиент подписал договор с ним. А ты узнал об этом в пятницу вечером.</p>
 </div>
-<div class="bg-white rounded-xl border border-tertiary-fixed-dim/50 shadow-sm p-8 md:-translate-y-4">
-<div class="w-12 h-12 rounded-full bg-surface-variant text-on-surface flex items-center justify-center mb-6">
-<span class="material-symbols-outlined" style="">person_alert</span>
+<div class="bg-white rounded-xl border border-tertiary-fixed-dim/50 shadow-sm p-6 md:p-8 md:-translate-y-4">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-variant text-on-surface flex items-center justify-center mb-4 md:mb-6">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">person_alert</span>
 </div>
-<h3 class="font-h3 text-h3 text-on-surface mb-3" style="">Сметчики перегружены рутиной</h3>
-<p class="font-body-md text-sm text-on-surface-variant" style="">Хороший инженер тратит часы на монотонный подсчёт профилей и панелей в Excel. Из-за этого отдел зашивается в сезон и не успевает отвечать всем клиентам. Smetika берёт рутину на себя, позволяя вашей команде просчитывать в 10 раз больше заказов без стресса и выгорания.</p>
+<h3 class="font-h3 text-xl md:text-h3 text-on-surface mb-2 md:mb-3">Сметчики перегружены рутиной</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Хороший инженер тратит часы на монотонный подсчёт профилей и панелей в Excel. Из-за этого отдел зашивается в сезон и не успевает отвечать всем клиентам. Smetika берёт рутину на себя, позволяя вашей команде просчитывать в 10 раз больше заказов без стресса и выгорания.</p>
 </div>
-<div class="bg-white rounded-xl border border-tertiary-fixed-dim/50 shadow-sm p-8">
-<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-6">
-<span class="material-symbols-outlined" style="">sports_score</span>
+<div class="bg-white rounded-xl border border-tertiary-fixed-dim/50 shadow-sm p-6 md:p-8">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-4 md:mb-6">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">sports_score</span>
 </div>
-<h3 class="font-h3 text-h3 text-on-surface mb-3" style="">Тендер достаётся первому</h3>
-<p class="font-body-md text-sm text-on-surface-variant" style="">Ты получаешь ТЗ с чертежом. Срок подачи — 2 дня. Ты смотришь: 80 помещений, 3 этажа. Вручную — неделя. Не подаёшься. Но конкурент — с теми же компетенциями и теми же ценами — подаётся. И выигрывает контракт на 2 миллиона.</p>
+<h3 class="font-h3 text-xl md:text-h3 text-on-surface mb-2 md:mb-3">Тендер достаётся первому</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Ты получаешь ТЗ с чертежом. Срок подачи — 2 дня. Ты смотришь: 80 помещений, 3 этажа. Вручную — неделя. Не подаёшься. Но конкурент — с теми же компетенциями и теми же ценами — подаётся. И выигрывает контракт на 2 миллиона.</p>
 </div>
 </div>
-<p class="text-center mt-12 font-medium text-on-surface" style="">Мы не предлагаем нанять ещё одного сметчика. Мы предлагаем переложить рутинные задачи на ИИ.</p>
+<p class="text-center mt-8 md:mt-12 text-sm md:text-base font-medium text-on-surface">Мы не предлагаем нанять ещё одного сметчика. Мы предлагаем переложить рутинные задачи на ИИ.</p>
 </section>
 <!-- [4] SOLUTION (How it works) -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter py-xxl bg-surface-container-low rounded-3xl my-xxl border border-surface-variant/50" id="how-it-works">
-<div class="text-center mb-16">
-<h2 class="font-h2 text-h2 text-on-background mb-4" style="">Как это работает: 3 шага</h2>
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter py-12 md:py-xxl bg-surface-container-low rounded-2xl md:rounded-3xl my-12 md:my-xxl border border-surface-variant/50" id="how-it-works">
+<div class="text-center mb-10 md:mb-16">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background mb-4">Как это работает: 3 шага</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
 <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-outline-variant/30 z-0"></div>
 <div class="relative z-10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full bg-white border border-outline-variant/30 shadow-sm flex items-center justify-center mb-6 text-on-surface">
-<span class="material-symbols-outlined text-4xl" style="">upload_file</span>
+<div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border border-outline-variant/30 shadow-sm flex items-center justify-center mb-4 md:mb-6 text-on-surface">
+<span class="material-symbols-outlined text-3xl md:text-4xl">upload_file</span>
 </div>
-<div class="bg-white px-3 py-1 rounded-full text-xs font-bold text-secondary-container mb-3 shadow-sm border border-secondary-fixed-dim/30" style="">1</div>
-<h3 class="font-h3 text-xl text-on-surface mb-2" style="">Загрузите PDF-чертёж</h3>
-<p class="font-body-md text-on-surface-variant text-sm" style="">Откройте веб-платформу Smetika (или Telegram бот) и загрузите архитектурный план объекта - любой формат: A0, A1, многоэтажный. Векторный или сканированный PDF файл.</p>
-</div>
-<div class="relative z-10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full bg-primary-container text-on-primary border border-outline-variant/30 shadow-md flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-4xl" style="">memory</span>
-</div>
-<div class="bg-white px-3 py-1 rounded-full text-xs font-bold text-secondary-container mb-3 shadow-sm border border-secondary-fixed-dim/30" style="">2</div>
-<h3 class="font-h3 text-xl text-on-surface mb-2" style="">ИИ читает чертёж</h3>
-<p class="font-body-md text-on-surface-variant text-sm" style="">Система автоматически распознаёт планы этажей, извлекает экспликацию помещений (номера, названия, площади), рассчитывает раскладку потолочной сетки для каждой комнаты.</p>
+<div class="bg-white px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-secondary-container mb-2 md:mb-3 shadow-sm border border-secondary-fixed-dim/30">1</div>
+<h3 class="font-h3 text-lg md:text-xl text-on-surface mb-2">Загрузите PDF-чертёж</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Откройте веб-платформу Smetika (или Telegram бот) и загрузите архитектурный план объекта - любой формат: A0, A1, многоэтажный. Векторный или сканированный PDF файл.</p>
 </div>
 <div class="relative z-10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full bg-white border border-outline-variant/30 shadow-sm flex items-center justify-center mb-6 text-on-surface">
-<span class="material-symbols-outlined text-4xl" style="">download</span>
+<div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary-container text-on-primary border border-outline-variant/30 shadow-md flex items-center justify-center mb-4 md:mb-6">
+<span class="material-symbols-outlined text-3xl md:text-4xl">memory</span>
 </div>
-<div class="bg-white px-3 py-1 rounded-full text-xs font-bold text-secondary-container mb-3 shadow-sm border border-secondary-fixed-dim/30" style="">3</div>
-<h3 class="font-h3 text-xl text-on-surface mb-2" style="">Получите готовую смету</h3>
-<p class="font-body-md text-on-surface-variant text-sm" style="">Через 3–20 минут вы получаете .xlsx-файл со сметой: панели, несущие профили, поперечные профили, подвесы, уголок с разбивкой по каждому помещению и этажу.</p>
+<div class="bg-white px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-secondary-container mb-2 md:mb-3 shadow-sm border border-secondary-fixed-dim/30">2</div>
+<h3 class="font-h3 text-lg md:text-xl text-on-surface mb-2">ИИ читает чертёж</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Система автоматически распознаёт планы этажей, извлекает экспликацию помещений (номера, названия, площади), рассчитывает раскладку потолочной сетки для каждой комнаты.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border border-outline-variant/30 shadow-sm flex items-center justify-center mb-4 md:mb-6 text-on-surface">
+<span class="material-symbols-outlined text-3xl md:text-4xl">download</span>
+</div>
+<div class="bg-white px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-secondary-container mb-2 md:mb-3 shadow-sm border border-secondary-fixed-dim/30">3</div>
+<h3 class="font-h3 text-lg md:text-xl text-on-surface mb-2">Получите готовую смету</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Через 3–20 минут вы получаете .xlsx-файл со сметой: панели, несущие профили, поперечные профили, подвесы, уголок с разбивкой по каждому помещению и этажу.</p>
 </div>
 </div>
-<div class="mt-16 p-8 bg-white/50 border border-outline-variant/20 rounded-2xl">
-<h4 class="font-bold text-on-surface mb-4" style="">Пример реального результата:</h4>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-on-surface-variant">
-<div class="" style=""><strong>Объект:</strong> школа, 4 этажа, 162 помещения с подвесными потолками</div>
-<div class="" style=""><strong>Время обработки:</strong> 6 минут</div>
-<div class="" style=""><strong>Точность:</strong> расхождение с ручной сметой — 3%</div>
-<div class="" style=""><strong>Что получили:</strong> полная смета, готовая к передаче в отдел закупок</div>
+<div class="mt-10 md:mt-16 p-6 md:p-8 bg-white/50 border border-outline-variant/20 rounded-xl md:rounded-2xl">
+<h4 class="font-bold text-on-surface mb-4 text-center md:text-left">Пример реального результата:</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-sm text-on-surface-variant text-center md:text-left">
+<div><strong>Объект:</strong> школа, 4 этажа, 162 помещения с подвесными потолками</div>
+<div><strong>Время обработки:</strong> 6 минут</div>
+<div><strong>Точность:</strong> расхождение с ручной сметой — 3%</div>
+<div><strong>Что получили:</strong> полная смета, готовая к передаче в отдел закупок</div>
 </div>
 </div>
 </section>
 <!-- [5] DEMO -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter py-xxl text-center" id="demo">
-<h2 class="font-h2 text-h2 text-on-background mb-8" style="">Смотрите: PDF внутри → Excel снаружи</h2>
-<div class="max-w-4xl mx-auto aspect-video bg-inverse-surface rounded-3xl relative overflow-hidden group cursor-pointer flex items-center justify-center shadow-xl mb-10">
-<div class="w-20 h-20 bg-secondary-container text-on-primary rounded-full flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform" style="">▶</div>
-<div class="absolute bottom-6 left-0 right-0 text-white/70 text-sm" style="">Реальный расчёт. Реальный объект. Никакого монтажа.</div>
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter py-12 md:py-xxl text-center" id="demo">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background mb-6 md:mb-8">Смотрите: PDF внутри → Excel снаружи</h2>
+<div class="max-w-4xl mx-auto aspect-video bg-inverse-surface rounded-2xl md:rounded-3xl relative overflow-hidden group cursor-pointer flex items-center justify-center shadow-xl mb-8 md:mb-10">
+<div class="w-16 h-16 md:w-20 md:h-20 bg-secondary-container text-on-primary rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-lg group-hover:scale-110 transition-transform">▶</div>
+<div class="absolute bottom-4 md:bottom-6 left-0 right-0 text-white/70 text-xs md:text-sm px-4">Реальный расчёт. Реальный объект. Никакого монтажа.</div>
 </div>
 <div class="flex flex-col items-center">
-<a class="inline-flex items-center justify-center px-8 py-4 bg-secondary-container text-on-primary font-label-sm text-label-sm rounded-lg shadow-lg hover:shadow-xl transition-all mb-3" href="#cta" style="">
+<a class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-secondary-container text-on-primary font-label-sm text-sm md:text-label-sm rounded-lg shadow-lg hover:shadow-xl transition-all mb-3 w-full sm:w-auto" href="#cta">
                     Хочу так же → Получить мой расчёт бесплатно
                 </a>
-<p class="text-xs text-on-surface-variant" style="">Без обязательств. Без регистрации. Первый расчёт бесплатно.</p>
+<p class="text-[10px] md:text-xs text-on-surface-variant">Без обязательств. Без регистрации. Первый расчёт бесплатно.</p>
 </div>
 </section>
 <!-- [6] RESULTS (Stats) -->
-<section class="w-full bg-surface-container-low py-xxl border-y border-outline-variant/20">
-<div class="max-w-container_max_width mx-auto px-gutter">
-<h2 class="font-h2 text-h2 text-on-background text-center mb-12" style="">В цифрах</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+<section class="w-full bg-surface-container-low py-12 md:py-xxl border-y border-outline-variant/20">
+<div class="max-w-container_max_width mx-auto px-4 md:px-gutter">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background text-center mb-8 md:mb-12">В цифрах</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
 <div class="text-center">
-<div class="text-4xl md:text-5xl font-black text-secondary-container mb-2" style="">3–20 мин</div>
-<p class="text-sm text-on-surface-variant" style="">Время расчёта объекта с 150+ помещениями</p>
-</div>
-<div class="text-center">
-<div class="text-4xl md:text-5xl font-black text-on-surface mb-2" style="">2–4 дня</div>
-<p class="text-sm text-on-surface-variant" style="">Столько занимал тот же расчёт до Smetika</p>
+<div class="text-3xl md:text-5xl font-black text-secondary-container mb-1 md:mb-2">3–20 мин</div>
+<p class="text-xs md:text-sm text-on-surface-variant">Время расчёта объекта с 150+ помещениями</p>
 </div>
 <div class="text-center">
-<div class="text-4xl md:text-5xl font-black text-on-surface mb-2" style="">±95%</div>
-<p class="text-sm text-on-surface-variant" style="">Точность расчёта vs. ручная смета</p>
+<div class="text-3xl md:text-5xl font-black text-on-surface mb-1 md:mb-2">2–4 дня</div>
+<p class="text-xs md:text-sm text-on-surface-variant">Столько занимал тот же расчёт до Smetika</p>
 </div>
 <div class="text-center">
-<div class="text-4xl md:text-5xl font-black text-on-surface mb-2" style="">~70 руб.</div>
-<p class="text-sm text-on-surface-variant" style="">Стоимость одного расчёта (API-издержки)</p>
+<div class="text-3xl md:text-5xl font-black text-on-surface mb-1 md:mb-2">±95%</div>
+<p class="text-xs md:text-sm text-on-surface-variant">Точность расчёта vs. ручная смета</p>
+</div>
+<div class="text-center">
+<div class="text-3xl md:text-5xl font-black text-on-surface mb-1 md:mb-2">~70 руб.</div>
+<p class="text-xs md:text-sm text-on-surface-variant">Стоимость одного расчёта (API-издержки)</p>
 </div>
 </div>
-<p class="text-center text-sm text-on-surface-variant max-w-4xl mx-auto opacity-70" style="">
+<p class="text-center text-xs md:text-sm text-on-surface-variant max-w-4xl mx-auto opacity-70">
                     Мы валидировали точность расчётного движка Smetika против эталонной сметы, составленной опытным инженером-сметчиком вручную. Расхождение по ключевым позициям (панели, профили, подвесы, уголок) — не более 5%.
                 </p>
 </div>
 </section>
 <!-- [6.5] SOCIAL PROOF -->
-<section class="w-full py-xxl bg-surface-variant/30">
-<div class="max-w-3xl mx-auto px-gutter text-center">
-<h2 class="font-h2 text-h2 text-on-background mb-8" style="">Что говорят клиенты</h2>
-<div class="relative italic text-xl text-on-surface leading-relaxed mb-8" style="">
+<section class="w-full py-12 md:py-xxl bg-surface-variant/30">
+<div class="max-w-3xl mx-auto px-4 md:px-gutter text-center">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background mb-6 md:mb-8">Что говорят клиенты</h2>
+<div class="relative italic text-lg md:text-xl text-on-surface leading-relaxed mb-6 md:mb-8">
                     «Школа, 4 этажа, 162 помещения — смета была готова за 6 минут. Проверили вручную: расхождение 3%. Теперь мы подаёмся на все тендеры с коротким сроком - и выигрываем там, где раньше даже не пытались.»
                 </div>
 <div class="not-italic">
-<div class="font-bold text-on-surface" style="">Алексей Кузнецов</div>
-<div class="text-sm text-on-surface-variant" style="">руководитель сметного отдела, ГК «СтройМастер», Москва</div>
+<div class="font-bold text-on-surface text-sm md:text-base">Алексей Кузнецов</div>
+<div class="text-xs md:text-sm text-on-surface-variant">руководитель сметного отдела, ГК «СтройМастер», Москва</div>
 </div>
 </div>
 </section>
 <!-- [7] FEATURES -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter py-xxl" id="features">
-<h2 class="font-h2 text-h2 text-on-background text-center mb-16" style="">Что умеет Smetika</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8"><div class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-outline-variant/10 shadow-sm">
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter py-12 md:py-xxl" id="features">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background text-center mb-10 md:mb-16">Что умеет Smetika</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8">
+<div class="flex gap-3 md:gap-4 items-start bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/10 shadow-sm">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center">
-<svg class="w-5 h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-4 h-4 md:w-5 md:h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<p class="text-on-surface-variant text-sm" style=""><strong>Читает PDF любой сложности</strong> — форматы A0/A1, многоэтажные здания, нестандартные планировки.</p>
+<p class="text-on-surface-variant text-xs md:text-sm"><strong>Читает PDF любой сложности</strong> — форматы A0/A1, многоэтажные здания, нестандартные планировки.</p>
 </div>
-<div class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-outline-variant/10 shadow-sm">
+<div class="flex gap-3 md:gap-4 items-start bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/10 shadow-sm">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center">
-<svg class="w-5 h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-4 h-4 md:w-5 md:h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<p class="text-on-surface-variant text-sm" style=""><strong>Распознаёт экспликацию</strong> — номера, названия, площади извлекаются автоматически из чертежа.</p>
+<p class="text-on-surface-variant text-xs md:text-sm"><strong>Распознаёт экспликацию</strong> — номера, названия, площади извлекаются автоматически из чертежа.</p>
 </div>
-<div class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-outline-variant/10 shadow-sm">
+<div class="flex gap-3 md:gap-4 items-start bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/10 shadow-sm">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center">
-<svg class="w-5 h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-4 h-4 md:w-5 md:h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<p class="text-on-surface-variant text-sm" style=""><strong>Рассчитывает раскладку</strong> — панели, несущие профили 3600 мм, поперечные 1200/600 мм, подвесы, уголок.</p>
+<p class="text-on-surface-variant text-xs md:text-sm"><strong>Рассчитывает раскладку</strong> — панели, несущие профили 3600 мм, поперечные 1200/600 мм, подвесы, уголок.</p>
 </div>
-<div class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-outline-variant/10 shadow-sm">
+<div class="flex gap-3 md:gap-4 items-start bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/10 shadow-sm">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center">
-<svg class="w-5 h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-4 h-4 md:w-5 md:h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<p class="text-on-surface-variant text-sm" style=""><strong>Выдаёт Excel-смету</strong> — с разбивкой по этажам и помещениям, готовую к закупке.</p>
+<p class="text-on-surface-variant text-xs md:text-sm"><strong>Выдаёт Excel-смету</strong> — с разбивкой по этажам и помещениям, готовую к закупке.</p>
 </div>
-<div class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-outline-variant/10 shadow-sm">
+<div class="flex gap-3 md:gap-4 items-start bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/10 shadow-sm">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center">
-<svg class="w-5 h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-4 h-4 md:w-5 md:h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<p class="text-on-surface-variant text-sm" style=""><strong>Работает везде</strong> — в браузере и Telegram. Не нужно устанавливать тяжёлое ПО или долго обучаться.</p>
+<p class="text-on-surface-variant text-xs md:text-sm"><strong>Работает везде</strong> — в браузере и Telegram. Не нужно устанавливать тяжёлое ПО или долго обучаться.</p>
 </div>
-<div class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-outline-variant/10 shadow-sm">
+<div class="flex gap-3 md:gap-4 items-start bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/10 shadow-sm">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center">
-<svg class="w-5 h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-4 h-4 md:w-5 md:h-5 text-secondary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<p class="text-on-surface-variant text-sm" style=""><strong>White-Label решение</strong> — развернём систему под брендом вашей компании на удалённом сервере.</p>
-</div></div>
+<p class="text-on-surface-variant text-xs md:text-sm"><strong>White-Label решение</strong> — развернём систему под брендом вашей компании на удалённом сервере.</p>
+</div>
+</div>
 </section>
 <!-- [8] USE CASES -->
-<section class="w-full py-xxl bg-surface-container-low">
-<div class="max-w-container_max_width mx-auto px-gutter">
-<h2 class="font-h2 text-h2 text-on-background text-center mb-16" style="">Smetika создан для вас, если...</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-4xl text-secondary-container mb-4" style="">construction</span>
-<h3 class="font-h3 text-xl mb-3" style="">Вы — подрядчик по ремонту</h3>
-<p class="text-sm text-on-surface-variant" style="">Офисы, школы, больницы, торговые центры. Вы регулярно получаете чертежи от заказчика и должны оперативно выдавать КП. Smetika превращает 3-дневный расчёт в 5-минутный.</p>
+<section class="w-full py-12 md:py-xxl bg-surface-container-low">
+<div class="max-w-container_max_width mx-auto px-4 md:px-gutter">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background text-center mb-10 md:mb-16">Smetika создан для вас, если...</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+<div class="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl border border-outline-variant/30 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-3xl md:text-4xl text-secondary-container mb-3 md:mb-4">construction</span>
+<h3 class="font-h3 text-lg md:text-xl mb-2 md:mb-3">Вы — подрядчик по ремонту</h3>
+<p class="text-sm text-on-surface-variant">Офисы, школы, больницы, торговые центры. Вы регулярно получаете чертежи от заказчика и должны оперативно выдавать КП. Smetika превращает 3-дневный расчёт в 5-минутный.</p>
 </div>
-<div class="bg-white p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-4xl text-secondary-container mb-4" style="">assignment</span>
-<h3 class="font-h3 text-xl mb-3" style="">Вы участвуете в тендерах</h3>
-<p class="text-sm text-on-surface-variant" style="">Сроки подачи — 1–3 дня. Нет времени считать вручную. Smetika даёт точную смету за минуты — и вы успеваете подать заявку.</p>
+<div class="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl border border-outline-variant/30 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-3xl md:text-4xl text-secondary-container mb-3 md:mb-4">assignment</span>
+<h3 class="font-h3 text-lg md:text-xl mb-2 md:mb-3">Вы участвуете в тендерах</h3>
+<p class="text-sm text-on-surface-variant">Сроки подачи — 1–3 дня. Нет времени считать вручную. Smetika даёт точную смету за минуты — и вы успеваете подать заявку.</p>
 </div>
-<div class="bg-white p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
-<span class="material-symbols-outlined text-4xl text-secondary-container mb-4" style="">store</span>
-<h3 class="font-h3 text-xl mb-3" style="">Вы — дистрибьютор Armstrong</h3>
-<p class="text-sm text-on-surface-variant" style="">Большой поток запросов от клиентов. Каждый хочет расчёт «прямо сейчас». Smetika обрабатывает любое количество объектов параллельно без увеличения штата.</p>
+<div class="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl border border-outline-variant/30 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-3xl md:text-4xl text-secondary-container mb-3 md:mb-4">store</span>
+<h3 class="font-h3 text-lg md:text-xl mb-2 md:mb-3">Вы — дистрибьютор Armstrong</h3>
+<p class="text-sm text-on-surface-variant">Большой поток запросов от клиентов. Каждый хочет расчёт «прямо сейчас». Smetika обрабатывает любое количество объектов параллельно без увеличения штата.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- [9] PRICING -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter py-xxl" id="pricing">
-<div class="text-center mb-16">
-<h2 class="font-h2 text-h2 text-on-background mb-4" style="">Ваш собственный инструмент в изолированной среде</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto" style="">Smetika разворачивается на изолированном виртуальном сервере (VPS) под вашу компанию. Доступ к данным есть только у вас. Ваш портал и бот — ваш бренд.</p>
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter py-12 md:py-xxl" id="pricing">
+<div class="text-center mb-10 md:mb-16">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background mb-4">Ваш собственный инструмент в изолированной среде</h2>
+<p class="text-on-surface-variant text-sm md:text-base max-w-2xl mx-auto">Smetika разворачивается на изолированном виртуальном сервере (VPS) под вашу компанию. Доступ к данным есть только у вас. Ваш портал и бот — ваш бренд.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 <!-- Free -->
-<div class="bg-white p-10 rounded-3xl border border-outline-variant/30 flex flex-col items-center text-center">
-<h3 class="font-h3 text-2xl mb-2" style="">Пробный расчёт</h3>
-<div class="text-4xl font-black text-on-surface mb-8" style="">Бесплатно</div>
-<ul class="text-left space-y-4 mb-10 flex-1"><li class="flex items-center gap-3" style="">
+<div class="bg-white p-8 md:p-10 rounded-2xl md:rounded-3xl border border-outline-variant/30 flex flex-col items-center text-center">
+<h3 class="font-h3 text-xl md:text-2xl mb-2">Пробный расчёт</h3>
+<div class="text-3xl md:text-4xl font-black text-on-surface mb-6 md:mb-8">Бесплатно</div>
+<ul class="text-left space-y-3 md:space-y-4 mb-8 md:mb-10 flex-1 w-full">
+<li class="flex items-center gap-3">
 <div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
-<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-on-surface text-sm" style="">1 расчёт на ваш реальный объект</span>
+<span class="text-on-surface text-sm">1 расчёт на ваш реальный объект</span>
 </li>
-<li class="flex items-center gap-3" style="">
+<li class="flex items-center gap-3">
 <div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
-<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-on-surface text-sm" style="">Полный результат в Excel</span>
+<span class="text-on-surface text-sm">Полный результат в Excel</span>
 </li>
-<li class="flex items-center gap-3" style="">
+<li class="flex items-center gap-3">
 <div class="w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
-<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-on-surface text-sm" style="">Никаких обязательств</span>
-</li></ul>
-<a class="w-full py-4 rounded-xl border border-on-surface hover:bg-on-surface hover:text-white transition-colors font-bold" href="#cta" style="">Получить мой бесплатный расчёт</a>
-<p class="text-[10px] mt-4 opacity-50 uppercase tracking-widest" style="">Без обязательств. Без регистрации.</p>
+<span class="text-on-surface text-sm">Никаких обязательств</span>
+</li>
+</ul>
+<a class="w-full py-3 md:py-4 rounded-xl border border-on-surface hover:bg-on-surface hover:text-white transition-colors font-bold text-sm md:text-base" href="#cta">Получить мой бесплатный расчёт</a>
+<p class="text-[10px] mt-4 opacity-50 uppercase tracking-widest">Без обязательств. Без регистрации.</p>
 </div>
 <!-- Premium -->
-<div class="bg-primary-container p-10 rounded-3xl border-4 border-secondary-container relative flex flex-col items-center text-center shadow-2xl">
-<span class="absolute top-0 -translate-y-1/2 bg-secondary-container text-on-primary px-6 py-2 rounded-full font-bold text-sm" style="">РЕКОМЕНДУЕМ</span>
-<h3 class="font-h3 text-2xl mb-2 text-white" style="">Внедрение под ключ</h3>
-<div class="text-4xl font-black text-white mb-2" style="">300 000 руб.</div>
-<p class="text-white/60 text-sm mb-8" style="">единоразово</p>
-<div class="text-left w-full space-y-4 mb-10 flex-1">
-<p class="text-white/80 text-sm italic mb-4" style="">+ инфраструктура (~9 000 руб./мес.)<br/>+ поддержка (20 000 руб./мес.)</p>
-<ul class="text-white/90 space-y-3"><li class="flex items-start gap-3" style="">
+<div class="bg-primary-container p-8 md:p-10 rounded-2xl md:rounded-3xl border-4 border-secondary-container relative flex flex-col items-center text-center shadow-xl md:shadow-2xl mt-4 md:mt-0">
+<span class="absolute top-0 -translate-y-1/2 bg-secondary-container text-on-primary px-4 md:px-6 py-1.5 md:py-2 rounded-full font-bold text-[10px] md:text-sm">РЕКОМЕНДУЕМ</span>
+<h3 class="font-h3 text-xl md:text-2xl mb-2 text-white">Внедрение под ключ</h3>
+<div class="text-3xl md:text-4xl font-black text-white mb-1 md:mb-2">300 000 руб.</div>
+<p class="text-white/60 text-xs md:text-sm mb-6 md:mb-8">единоразово</p>
+<div class="text-left w-full space-y-3 md:space-y-4 mb-8 md:mb-10 flex-1">
+<p class="text-white/80 text-xs md:text-sm italic mb-4">+ инфраструктура (~9 000 руб./мес.)<br/>+ поддержка (20 000 руб./мес.)</p>
+<ul class="text-white/90 space-y-3 w-full">
+<li class="flex items-start gap-3">
 <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
-<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-white/90 text-sm" style="">Установка на изолированном VPS</span>
+<span class="text-white/90 text-sm">Установка на изолированном VPS</span>
 </li>
-<li class="flex items-start gap-3" style="">
+<li class="flex items-start gap-3">
 <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
-<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-white/90 text-sm" style="">Корпоративный Веб-интерфейс</span>
+<span class="text-white/90 text-sm">Корпоративный Веб-интерфейс</span>
 </li>
-<li class="flex items-start gap-3" style="">
+<li class="flex items-start gap-3">
 <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
-<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-white/90 text-sm" style="">Настройка каталога под поставщиков</span>
+<span class="text-white/90 text-sm">Настройка каталога под поставщиков</span>
 </li>
-<li class="flex items-start gap-3" style="">
+<li class="flex items-start gap-3">
 <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
-<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-3 h-3 text-primary-container" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-white/90 text-sm" style="">Интеграция с вашей номенклатурой</span>
-</li></ul>
+<span class="text-white/90 text-sm">Интеграция с вашей номенклатурой</span>
+</li>
+</ul>
 </div>
-<a class="w-full py-4 rounded-xl bg-secondary-container text-on-primary shadow-lg shadow-secondary-container/30 hover:scale-105 transition-transform font-bold" href="#cta" style="">Обсудить моё внедрение</a>
+<a class="w-full py-3 md:py-4 rounded-xl bg-secondary-container text-on-primary shadow-lg shadow-secondary-container/30 hover:scale-105 transition-transform font-bold text-sm md:text-base" href="#cta">Обсудить моё внедрение</a>
 </div>
 </div>
 <!-- ROI Section -->
-<div class="bg-white rounded-3xl border border-outline-variant/30 p-8 md:p-12 mb-12 shadow-sm">
-<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12 border-b border-outline-variant/20 pb-8">
+<div class="bg-white rounded-2xl md:rounded-3xl border border-outline-variant/30 p-6 md:p-12 mb-10 md:mb-12 shadow-sm">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8 md:mb-12 border-b border-outline-variant/20 pb-6 md:pb-8">
 <div class="max-w-xl text-left">
-<h3 class="font-h2 text-3xl text-on-surface mb-4">Экономика внедрения</h3>
-<p class="text-on-surface-variant text-lg">
-                Стоимость системы <span class="font-bold text-on-surface">300 000 руб.</span> — это всего <span class="font-bold text-on-surface">2 месяца зарплаты</span> одного среднего сметчика. 
+<h3 class="font-h2 text-xl md:text-3xl text-on-surface mb-3 md:mb-4">Экономика внедрения</h3>
+<p class="text-on-surface-variant text-sm md:text-lg">
+                Стоимость системы <span class="font-bold text-on-surface">300 000 руб.</span> — это всего <span class="font-bold text-on-surface">2 месяца зарплаты</span> одного среднего сметчика.
             </p>
 </div>
-<div class="bg-secondary-container/10 px-6 py-4 rounded-2xl border border-secondary-container/20 text-center">
-<div class="text-xs uppercase tracking-widest text-secondary-container font-bold mb-1">Гарантированный ROI</div>
-<div class="text-2xl font-black text-secondary-container uppercase">Окупаемость: 1 тендер</div>
+<div class="bg-secondary-container/10 px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border border-secondary-container/20 text-center w-full md:w-auto">
+<div class="text-[10px] md:text-xs uppercase tracking-widest text-secondary-container font-bold mb-1">Гарантированный ROI</div>
+<div class="text-lg md:text-2xl font-black text-secondary-container uppercase">Окупаемость: 1 тендер</div>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10">
-<div class="text-sm text-on-surface-variant mb-2">Внедрение</div>
-<div class="text-2xl font-black text-on-surface">300 000 ₽</div>
-<div class="text-xs text-on-surface-variant mt-2">Единоразовый платеж</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8 md:mb-12">
+<div class="p-5 md:p-6 rounded-xl md:rounded-2xl bg-surface-container-low border border-outline-variant/10 text-center md:text-left">
+<div class="text-xs md:text-sm text-on-surface-variant mb-1 md:mb-2">Внедрение</div>
+<div class="text-xl md:text-2xl font-black text-on-surface">300 000 ₽</div>
+<div class="text-[10px] md:text-xs text-on-surface-variant mt-1 md:mt-2">Единоразовый платеж</div>
 </div>
-<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10">
-<div class="text-sm text-on-surface-variant mb-2">ФОТ сметчика</div>
-<div class="text-2xl font-black text-on-surface">125 000 ₽+</div>
-<div class="text-xs text-on-surface-variant mt-2">Средняя з/п в месяц</div>
+<div class="p-5 md:p-6 rounded-xl md:rounded-2xl bg-surface-container-low border border-outline-variant/10 text-center md:text-left">
+<div class="text-xs md:text-sm text-on-surface-variant mb-1 md:mb-2">ФОТ сметчика</div>
+<div class="text-xl md:text-2xl font-black text-on-surface">125 000 ₽+</div>
+<div class="text-[10px] md:text-xs text-on-surface-variant mt-1 md:mt-2">Средняя з/п в месяц</div>
 </div>
-<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10">
-<div class="text-sm text-on-surface-variant mb-2">Производительность</div>
-<div class="text-2xl font-black text-secondary-container">в 10 раз</div>
-<div class="text-xs text-on-surface-variant mt-2">Выше текущей скорости</div>
+<div class="p-5 md:p-6 rounded-xl md:rounded-2xl bg-surface-container-low border border-outline-variant/10 text-center md:text-left">
+<div class="text-xs md:text-sm text-on-surface-variant mb-1 md:mb-2">Производительность</div>
+<div class="text-xl md:text-2xl font-black text-secondary-container">в 10 раз</div>
+<div class="text-[10px] md:text-xs text-on-surface-variant mt-1 md:mt-2">Выше текущей скорости</div>
 </div>
-<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/10">
-<div class="text-sm text-on-surface-variant mb-2">Средний контракт</div>
-<div class="text-2xl font-black text-on-surface">1.5 млн ₽</div>
-<div class="text-xs text-on-surface-variant mt-2">Ожидаемая выручка</div>
+<div class="p-5 md:p-6 rounded-xl md:rounded-2xl bg-surface-container-low border border-outline-variant/10 text-center md:text-left">
+<div class="text-xs md:text-sm text-on-surface-variant mb-1 md:mb-2">Средний контракт</div>
+<div class="text-xl md:text-2xl font-black text-on-surface">1.5 млн ₽</div>
+<div class="text-[10px] md:text-xs text-on-surface-variant mt-1 md:mt-2">Ожидаемая выручка</div>
 </div>
 </div>
-<div class="bg-primary-container p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container text-4xl">insights</span>
-<p class="text-white/90 text-sm max-w-md">
+<div class="bg-primary-container p-5 md:p-6 rounded-xl md:rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+<div class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
+<span class="material-symbols-outlined text-secondary-container text-3xl md:text-4xl">insights</span>
+<p class="text-white/90 text-xs md:text-sm max-w-md">
                 Smetika работает круглосуточно, не уходит в отпуск и не совершает ошибок из-за усталости. Это ваш самый надежный сотрудник.
             </p>
 </div>
-<p class="text-white font-medium text-right text-sm italic">
+<p class="text-white font-medium text-center md:text-right text-xs md:text-sm italic">
             Вывод: внедрение окупается в первый же месяц при выигрыше 1 дополнительного тендера.
         </p>
 </div>
 </div>
 <!-- Isolated VPS Why -->
-<div class="space-y-12">
+<div class="space-y-8 md:space-y-12">
 <div class="text-center md:text-left">
-<h3 class="font-h2 text-3xl mb-4">Инфраструктурные преимущества</h3>
-<p class="text-on-surface-variant">Мы не просто даем доступ к облаку. Мы разворачиваем вашу персональную систему.</p>
+<h3 class="font-h2 text-2xl md:text-3xl mb-3 md:mb-4">Инфраструктурные преимущества</h3>
+<p class="text-on-surface-variant text-sm md:text-base">Мы не просто даем доступ к облаку. Мы разворачиваем вашу персональную систему.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="bg-white p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-<span class="material-symbols-outlined text-secondary-container mb-4">shield</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+<div class="bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/20 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-secondary-container mb-3 md:mb-4">shield</span>
 <h4 class="font-bold text-on-surface mb-2">Безопасность (Security)</h4>
-<p class="text-sm text-on-surface-variant">Данные хранятся на вашем изолированном сервере. Мы готовы подписать NDA перед началом работ.</p>
+<p class="text-xs md:text-sm text-on-surface-variant">Данные хранятся на вашем изолированном сервере. Мы готовы подписать NDA перед началом работ.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-<span class="material-symbols-outlined text-secondary-container mb-4">settings_input_component</span>
+<div class="bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/20 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-secondary-container mb-3 md:mb-4">settings_input_component</span>
 <h4 class="font-bold text-on-surface mb-2">Независимость</h4>
-<p class="text-sm text-on-surface-variant">Вы полностью контролируете свою версию софта. Никаких внезапных обновлений или сбоев общей системы.</p>
+<p class="text-xs md:text-sm text-on-surface-variant">Вы полностью контролируете свою версию софта. Никаких внезапных обновлений или сбоев общей системы.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-<span class="material-symbols-outlined text-secondary-container mb-4">custom_typography</span>
+<div class="bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/20 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-secondary-container mb-3 md:mb-4">custom_typography</span>
 <h4 class="font-bold text-on-surface mb-2">Брендинг</h4>
-<p class="text-sm text-on-surface-variant">Ваш логотип, ваши цвета, ваш домен. Ваши клиенты видят ваш профессиональный инструмент.</p>
+<p class="text-xs md:text-sm text-on-surface-variant">Ваш логотип, ваши цвета, ваш домен. Ваши клиенты видят ваш профессиональный инструмент.</p>
 </div>
-<div class="bg-white p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-<span class="material-symbols-outlined text-secondary-container mb-4">database</span>
+<div class="bg-white p-5 md:p-6 rounded-xl md:rounded-2xl border border-outline-variant/20 shadow-sm text-center md:text-left">
+<span class="material-symbols-outlined text-secondary-container mb-3 md:mb-4">database</span>
 <h4 class="font-bold text-on-surface mb-2">Интеграция</h4>
-<p class="text-sm text-on-surface-variant">Настройка базы под вашу номенклатуру материалов и поставщиков для мгновенных заказов.</p>
+<p class="text-xs md:text-sm text-on-surface-variant">Настройка базы под вашу номенклатуру материалов и поставщиков для мгновенных заказов.</p>
 </div>
 </div>
-<div class="bg-secondary-fixed text-on-secondary-fixed p-8 rounded-3xl flex flex-col md:flex-row items-center gap-6">
-<div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-3xl">priority_high</span>
+<div class="bg-secondary-fixed text-on-secondary-fixed p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col md:flex-row items-center gap-4 md:gap-6">
+<div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl md:text-3xl">priority_high</span>
 </div>
 <div class="text-center md:text-left">
-<p class="font-bold text-lg mb-1">Ограничение по внедрению: 3 компании в месяц</p>
-<p class="text-sm opacity-80">Для обеспечения премиального качества настройки и поддержки, мы берем ограниченное количество проектов. Уточните наличие мест у менеджера.</p>
+<p class="font-bold text-base md:text-lg mb-1">Ограничение по внедрению: 3 компании в месяц</p>
+<p class="text-xs md:text-sm opacity-80">Для обеспечения премиального качества настройки и поддержки, мы берем ограниченное количество проектов. Уточните наличие мест у менеджера.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- [10] FAQ -->
-<section class="w-full py-xxl bg-surface-container-low" id="faq">
-<div class="max-w-3xl mx-auto px-gutter">
-<h2 class="font-h2 text-h2 text-on-background text-center mb-16" style="">Частые вопросы</h2>
+<section class="w-full py-12 md:py-xxl bg-surface-container-low" id="faq">
+<div class="max-w-3xl mx-auto px-4 md:px-gutter">
+<h2 class="font-h2 text-2xl md:text-h2 text-on-background text-center mb-10 md:mb-16">Частые вопросы</h2>
 <div class="space-y-4">
-<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden" style="">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface" style="">
-                            Какие форматы PDF поддерживаются? <span class="material-symbols-outlined group-open:rotate-180 transition-transform" style="">expand_more</span>
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="p-5 md:p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface text-sm md:text-base">
+                            Какие форматы PDF поддерживаются? <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="p-6 pt-0 text-on-surface-variant text-sm border-t border-outline-variant/10" style="">
+<div class="p-5 md:p-6 pt-0 text-on-surface-variant text-xs md:text-sm border-t border-outline-variant/10">
                             Векторные PDF (экспортированные из AutoCAD, Revit, ArchiCAD) и сканированные PDF высокого разрешения. Форматы листов A0, A1 и меньше. Многоэтажные проекты в одном файле.
                         </div>
 </details>
-<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden" style="">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface" style="">
-                            Насколько точен расчёт? <span class="material-symbols-outlined group-open:rotate-180 transition-transform" style="">expand_more</span>
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="p-5 md:p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface text-sm md:text-base">
+                            Насколько точен расчёт? <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="p-6 pt-0 text-on-surface-variant text-sm border-t border-outline-variant/10" style="">
+<div class="p-5 md:p-6 pt-0 text-on-surface-variant text-xs md:text-sm border-t border-outline-variant/10">
                             Расчётный движок валидирован против эталонной сметы профессионального сметчика. Отклонение по ключевым позициям (панели, профили, подвесы) — в пределах ±5%.
                         </div>
 </details>
-<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden" style="">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface" style="">
-                            Нужно ли устанавливать программу? <span class="material-symbols-outlined group-open:rotate-180 transition-transform" style="">expand_more</span>
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="p-5 md:p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface text-sm md:text-base">
+                            Нужно ли устанавливать программу? <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="p-6 pt-0 text-on-surface-variant text-sm border-t border-outline-variant/10" style="">
+<div class="p-5 md:p-6 pt-0 text-on-surface-variant text-xs md:text-sm border-t border-outline-variant/10">
                             Нет. Smetika работает через браузер и Telegram. Открыли портал — загрузили файл — получили смету.
                         </div>
 </details>
-<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden" style="">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface" style="">
-                            Безопасны ли наши чертежи? <span class="material-symbols-outlined group-open:rotate-180 transition-transform" style="">expand_more</span>
+<details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="p-5 md:p-6 cursor-pointer flex justify-between items-center font-bold text-on-surface text-sm md:text-base">
+                            Безопасны ли наши чертежи? <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="p-6 pt-0 text-on-surface-variant text-sm border-t border-outline-variant/10" style="">
+<div class="p-5 md:p-6 pt-0 text-on-surface-variant text-xs md:text-sm border-t border-outline-variant/10">
                             Система разворачивается на изолированном виртуальном сервере (VPS) — файлы обрабатываются в приватной среде, доступ к которой есть только у вас. Готовы подписать NDA до начала работ.
                         </div>
 </details>
@@ -505,62 +515,62 @@
 </div>
 </section>
 <!-- [11] FINAL CTA -->
-<section class="w-full max-w-container_max_width mx-auto px-gutter py-xxl" id="cta">
-<div class="bg-on-background text-white rounded-[40px] p-8 md:p-16 text-center">
-<h2 class="font-h1 text-4xl md:text-5xl mb-6" style="">Пока вы читаете это — конкурент уже считает быстрее</h2>
-<p class="text-white/70 text-lg max-w-2xl mx-auto mb-12" style="">
+<section class="w-full max-w-container_max_width mx-auto px-4 md:px-gutter py-12 md:py-xxl" id="cta">
+<div class="bg-on-background text-white rounded-[28px] md:rounded-[40px] p-6 md:p-16 text-center">
+<h2 class="font-h1 text-3xl md:text-5xl mb-4 md:mb-6">Пока вы читаете это — конкурент уже считает быстрее</h2>
+<p class="text-white/70 text-base md:text-lg max-w-2xl mx-auto mb-8 md:mb-12">
                     Один реальный чертёж. Один бесплатный расчёт за 5 минут. Вы увидите результат своими глазами — и решите, нужно ли это вашей компании.
                 </p>
-<div class="max-w-md mx-auto bg-white p-8 rounded-3xl">
+<div class="max-w-md mx-auto bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl">
 <form class="space-y-4" data-lead-form="">
-<input class="w-full px-5 py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container" name="name" placeholder="Ваше Имя" required="" type="text"/>
-<input class="w-full px-5 py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container" name="contact" placeholder="Телефон / Telegram" required="" type="text"/>
-<input class="w-full px-5 py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container" name="company" placeholder="Название компании" type="text"/>
+<input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" name="name" placeholder="Ваше Имя" required="" type="text"/>
+<input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" name="contact" placeholder="Телефон / Telegram" required="" type="text"/>
+<input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" name="company" placeholder="Название компании" type="text"/>
 <input autocomplete="off" class="hidden" name="website" tabindex="-1" type="text"/>
-<label class="flex items-center gap-2 p-4 border-2 border-dashed border-outline-variant rounded-xl cursor-pointer hover:border-secondary-container transition-colors" style="">
-<span class="material-symbols-outlined text-secondary-container" style="">attach_file</span>
-<span class="text-xs text-on-surface-variant" data-file-label="" style="">Прикрепить PDF (опционально)</span>
+<label class="flex items-center gap-2 p-3 md:p-4 border-2 border-dashed border-outline-variant rounded-xl cursor-pointer hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">attach_file</span>
+<span class="text-xs text-on-surface-variant" data-file-label="">Прикрепить PDF (опционально)</span>
 <input accept=".pdf,application/pdf" class="hidden" name="pdf" type="file"/>
 </label>
 <div class="hidden text-xs rounded-xl px-4 py-3 bg-surface-container text-on-surface" data-form-status=""></div>
-<button class="w-full py-5 bg-secondary-container text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all" style="" type="submit">Получить мой бесплатный расчёт
+<button class="w-full py-4 md:py-5 bg-secondary-container text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all text-sm md:text-base" type="submit">Получить мой бесплатный расчёт
                         </button>
 </form>
-<p class="text-[10px] text-on-surface-variant mt-4 leading-relaxed" style="">
+<p class="text-[10px] text-on-surface-variant mt-4 leading-relaxed">
                         Без обязательств. Без регистрации. Первый расчёт бесплатно. Берём на внедрение не более 3 компаний в месяц — уточните наличие мест.
                     </p>
 </div>
-<div class="mt-12 flex flex-col items-center gap-4">
-<p class="text-white/60" style="">Или напишите нам напрямую:</p>
-<a class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-colors" href="https://t.me/DAmarketolog" style="" target="_blank">
-<img alt="TG" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqqrLaFi1G41ywReKUrJOVURqfQbwDkLdC4bkO6KVYbLRjhxLm7jovb4KjPMmHgPKpB-Q87JbZiOzmFVA0mhbGKwZqctZE7ro0AmDQFKD461oz0BYBGsDUj9XkSg1IxJcbnVfv8RBSfqUhimGM-GM1MFhPaGtVix-F5H0skF5J1bXVgUpW_2kFlZsJFuJiFfu0-gyBWZcF4k4rETW8AuPQQWlLnwowLaSRNrOCo9fjS4yIc47gvowLj5sbZDfATseMfWki-uNeNSgm" style=""/>
-<span class="font-bold" style="">@DAmarketolog</span>
+<div class="mt-8 md:mt-12 flex flex-col items-center gap-4">
+<p class="text-white/60">Или напишите нам напрямую:</p>
+<a class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-colors" href="https://t.me/DAmarketolog" target="_blank">
+<img alt="TG" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqqrLaFi1G41ywReKUrJOVURqfQbwDkLdC4bkO6KVYbLRjhxLm7jovb4KjPMmHgPKpB-Q87JbZiOzmFVA0mhbGKwZqctZE7ro0AmDQFKD461oz0BYBGsDUj9XkSg1IxJcbnVfv8RBSfqUhimGM-GM1MFhPaGtVix-F5H0skF5J1bXVgUpW_2kFlZsJFuJiFfu0-gyBWZcF4k4rETW8AuPQQWlLnwowLaSRNrOCo9fjS4yIc47gvowLj5sbZDfATseMfWki-uNeNSgm"/>
+<span class="font-bold">@DAmarketolog</span>
 </a>
 </div>
 </div>
 </section>
 </main>
 <!-- [12] FOOTER -->
-<footer class="w-full border-t border-outline-variant/20 py-16 bg-white">
-<div class="max-w-[1200px] mx-auto px-8 flex flex-col md:flex-row justify-between items-start gap-12">
+<footer class="w-full border-t border-outline-variant/20 py-10 md:py-16 bg-white">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
 <div class="flex flex-col gap-4">
 <span class="text-2xl font-black text-on-surface" style="letter-spacing: 0.25em;">SMETIKA</span>
-<p class="text-on-surface-variant text-sm max-w-xs" style="">Автоматический расчёт материалов для подвесных потолков</p>
-<span class="text-on-surface-variant/60 text-xs mt-4" style="">© 2026 SMETIKA. Все права защищены.</span>
+<p class="text-on-surface-variant text-sm max-w-xs">Автоматический расчёт материалов для подвесных потолков</p>
+<span class="text-on-surface-variant/60 text-xs mt-2 md:mt-4">© 2026 SMETIKA. Все права защищены.</span>
 </div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-4">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-4">
 <div class="flex flex-col gap-3">
-<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#how-it-works" style="">Как работает</a>
-<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#features" style="">Возможности</a>
-<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#pricing" style="">Тарифы</a>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#faq" style="">FAQ</a>
-<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#" style="">Политика</a>
+<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#how-it-works">Как работает</a>
+<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#features">Возможности</a>
+<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#pricing">Тарифы</a>
 </div>
 <div class="flex flex-col gap-3">
-<a class="text-sm font-bold text-on-surface" href="mailto:daniil@smetika.pro" style="">daniil@smetika.pro</a>
-<a class="text-sm font-bold text-on-surface" href="https://t.me/DAmarketolog" style="" target="_blank">@DAmarketolog</a>
+<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#faq">FAQ</a>
+<a class="text-sm text-on-surface hover:text-secondary-container transition-colors" href="#">Политика</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-sm font-bold text-on-surface" href="mailto:daniil@smetika.pro">daniil@smetika.pro</a>
+<a class="text-sm font-bold text-on-surface" href="https://t.me/DAmarketolog" target="_blank">@DAmarketolog</a>
 </div>
 </div>
 </div>

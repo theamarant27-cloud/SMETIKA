@@ -6,11 +6,11 @@ Wants=network-online.target
 [Service]
 Type=simple
 User=root
-WorkingDirectory=/root/projects/ADV_CAMPAGN/landing_page/backend
+WorkingDirectory=/root/projects/SMETIKA-repo/backend
 Environment=HOME=/root
 Environment=PATH=/usr/bin:/usr/local/bin
-EnvironmentFile=/root/projects/ADV_CAMPAGN/landing_page/backend/.env
-ExecStart=/usr/bin/node /root/projects/ADV_CAMPAGN/landing_page/backend/src/server.js
+EnvironmentFile=/root/projects/SMETIKA-repo/backend/.env
+ExecStart=/usr/bin/node /root/projects/SMETIKA-repo/backend/src/server.js
 Restart=always
 RestartSec=5
 
