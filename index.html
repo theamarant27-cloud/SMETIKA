@@ -530,7 +530,7 @@
 <input autocomplete="off" class="hidden" name="website" tabindex="-1" type="text"/>
 <label class="flex items-center gap-2 p-3 md:p-4 border-2 border-dashed border-outline-variant rounded-xl cursor-pointer hover:border-secondary-container transition-colors">
 <span class="material-symbols-outlined text-secondary-container">attach_file</span>
-<span class="text-xs text-on-surface-variant" data-file-label="">Прикрепить PDF (опционально)</span>
+<span class="text-xs text-on-surface-variant" data-file-label="">Прикрепить PDF (макс. 45 МБ)</span>
 <input accept=".pdf,application/pdf" class="hidden" name="pdf" type="file"/>
 </label>
 <div class="hidden text-xs rounded-xl px-4 py-3 bg-surface-container text-on-surface" data-form-status=""></div>
@@ -591,8 +591,9 @@
     const contactInput = form.querySelector("[data-contact-input]");
     const contactError = form.querySelector("[data-contact-error]");
 
-    // ← ВСТАВЬТЕ PRODUCTION WEBHOOK URL ПОСЛЕ АКТИВАЦИИ WORKFLOW В n8n
+    // Webhook для заявки (текст) и отдельный — для PDF
     const WEBHOOK_URL = "https://aimarketer3.app.n8n.cloud/webhook/landing-form";
+    const PDF_WEBHOOK_URL = "https://aimarketer3.app.n8n.cloud/webhook/landing-form-pdf";
 
     function isValidContact(value) {
       const v = value.trim();
@@ -648,42 +649,59 @@
         return;
       }
 
-      const formData = new FormData(form);
+      // Захватываем PDF до reset() — File-объект остаётся валидным
+      const pdfFile = fileInput?.files?.[0] ?? null;
+      const hasPdf = pdfFile && pdfFile.size > 0;
 
-      // Удаляем пустое поле pdf — n8n падает с 500 при парсинге пустого файла
-      const pdfFile = formData.get("pdf");
-      if (!pdfFile || pdfFile.size === 0) {
-        formData.delete("pdf");
-      }
+      // Формируем данные заявки без PDF
+      const formData = new FormData(form);
+      formData.delete("pdf");
 
       if (submitButton) {
         submitButton.disabled = true;
         submitButton.textContent = "Отправляем...";
       }
-
-      setStatus("Отправляем заявку. Это займёт несколько секунд.", false);
+      setStatus("Отправляем заявку...", false);
 
       try {
-        // Отправляем FormData напрямую в n8n webhook (multipart/form-data с PDF)
-        // Content-Type не выставляем вручную — браузер добавит boundary автоматически
-        const response = await fetch(WEBHOOK_URL, {
-          method: "POST",
-          body: formData
-        });
+        // Шаг 1: отправляем заявку (только текст)
+        const response = await fetch(WEBHOOK_URL, { method: "POST", body: formData });
+        if (!response.ok) throw new Error("Не удалось отправить заявку.");
 
-        if (!response.ok) {
-          throw new Error("Не удалось отправить заявку.");
-        }
-
+        // Сбрасываем форму сразу после успеха — заявка уже принята
+        const leadName = formData.get("name") || "";
+        const leadContact = formData.get("contact") || "";
         form.reset();
-        if (fileLabel) {
-          fileLabel.textContent = defaultFileLabel;
+        if (fileLabel) fileLabel.textContent = defaultFileLabel;
+
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = defaultButtonText;
         }
 
-        setStatus("Заявка отправлена. Мы свяжемся с вами и согласуем бесплатный расчёт.", false);
+        if (!hasPdf) {
+          setStatus("Заявка отправлена. Мы свяжемся с вами и согласуем бесплатный расчёт.", false);
+          return;
+        }
+
+        // Шаг 2: отправляем PDF отдельно (заявка уже сохранена)
+        setStatus("Заявка принята! Загружаем файл...", false);
+        try {
+          const pdfData = new FormData();
+          pdfData.append("name", leadName);
+          pdfData.append("contact", leadContact);
+          pdfData.append("pdf", pdfFile);
+
+          const pdfResponse = await fetch(PDF_WEBHOOK_URL, { method: "POST", body: pdfData });
+          if (!pdfResponse.ok) throw new Error("pdf");
+
+          setStatus("Заявка и файл успешно отправлены. Мы свяжемся с вами!", false);
+        } catch {
+          setStatus("Заявка отправлена. Файл не загрузился — пришлите его нам напрямую в Telegram.", false);
+        }
+
       } catch (error) {
         setStatus(error.message || "Ошибка отправки. Попробуйте ещё раз чуть позже.", true);
-      } finally {
         if (submitButton) {
           submitButton.disabled = false;
           submitButton.textContent = defaultButtonText;
