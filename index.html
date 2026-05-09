@@ -653,9 +653,10 @@
       const pdfFile = fileInput?.files?.[0] ?? null;
       const hasPdf = pdfFile && pdfFile.size > 0;
 
-      // Формируем данные заявки без PDF
+      // Формируем данные заявки без PDF, но с именем файла если он выбран
       const formData = new FormData(form);
       formData.delete("pdf");
+      if (hasPdf) formData.append("pdf_name", pdfFile.name);
 
       if (submitButton) {
         submitButton.disabled = true;
