@@ -524,7 +524,8 @@
 <div class="max-w-md mx-auto bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl">
 <form class="space-y-4" data-lead-form="">
 <input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" name="name" placeholder="Ваше Имя" required="" type="text"/>
-<input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" name="contact" placeholder="Телефон / Telegram" required="" type="text"/>
+<input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" data-contact-input="" name="contact" placeholder="Телефон / Telegram" required="" type="text"/>
+<div class="hidden text-xs text-red-400 px-1 -mt-2" data-contact-error="">Введите корректный номер телефона, например +7 999 123-45-67</div>
 <input class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl bg-surface-container border-none text-on-surface focus:ring-2 focus:ring-secondary-container text-sm md:text-base" name="company" placeholder="Название компании" type="text"/>
 <input autocomplete="off" class="hidden" name="website" tabindex="-1" type="text"/>
 <label class="flex items-center gap-2 p-3 md:p-4 border-2 border-dashed border-outline-variant rounded-xl cursor-pointer hover:border-secondary-container transition-colors">
@@ -587,9 +588,40 @@
     const submitButton = form.querySelector('button[type="submit"]');
     const defaultButtonText = submitButton ? submitButton.textContent.trim() : "";
     const defaultFileLabel = fileLabel ? fileLabel.textContent.trim() : "";
+    const contactInput = form.querySelector("[data-contact-input]");
+    const contactError = form.querySelector("[data-contact-error]");
 
     // ← ВСТАВЬТЕ PRODUCTION WEBHOOK URL ПОСЛЕ АКТИВАЦИИ WORKFLOW В n8n
     const WEBHOOK_URL = "https://aimarketer3.app.n8n.cloud/webhook/landing-form";
+
+    function isValidContact(value) {
+      const v = value.trim();
+      if (!v) return false;
+      // Телефон: от 10 до 15 цифр (любой формат: +7, 8, скобки, дефисы, пробелы)
+      return /^\d{10,15}$/.test(v.replace(/[\s\-\(\)\+]/g, ""));
+    }
+
+    function showContactError(show) {
+      if (!contactInput || !contactError) return;
+      if (show) {
+        contactError.classList.remove("hidden");
+        contactInput.classList.add("ring-2", "ring-red-400");
+      } else {
+        contactError.classList.add("hidden");
+        contactInput.classList.remove("ring-2", "ring-red-400");
+      }
+    }
+
+    if (contactInput) {
+      contactInput.addEventListener("blur", function () {
+        if (contactInput.value) showContactError(!isValidContact(contactInput.value));
+      });
+      contactInput.addEventListener("input", function () {
+        if (!contactError.classList.contains("hidden")) {
+          showContactError(!isValidContact(contactInput.value));
+        }
+      });
+    }
 
     const setStatus = function (message, isError) {
       if (!statusBox) return;
@@ -609,6 +641,12 @@
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
+
+      if (contactInput && !isValidContact(contactInput.value)) {
+        showContactError(true);
+        contactInput.focus();
+        return;
+      }
 
       const formData = new FormData(form);
 
