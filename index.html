@@ -587,7 +587,9 @@
     const submitButton = form.querySelector('button[type="submit"]');
     const defaultButtonText = submitButton ? submitButton.textContent.trim() : "";
     const defaultFileLabel = fileLabel ? fileLabel.textContent.trim() : "";
-    const apiBase = (window.SMETIKA_API_BASE_URL || "").replace(/\/+$/, "");
+
+    // ← ВСТАВЬТЕ PRODUCTION WEBHOOK URL ПОСЛЕ АКТИВАЦИИ WORKFLOW В n8n
+    const WEBHOOK_URL = "https://aimarketer3.app.n8n.cloud/webhook/landing-form";
 
     const setStatus = function (message, isError) {
       if (!statusBox) return;
@@ -618,17 +620,15 @@
       setStatus("Отправляем заявку. Это займёт несколько секунд.", false);
 
       try {
-        const response = await fetch(apiBase + "/api/leads", {
+        // Отправляем FormData напрямую в n8n webhook (multipart/form-data с PDF)
+        // Content-Type не выставляем вручную — браузер добавит boundary автоматически
+        const response = await fetch(WEBHOOK_URL, {
           method: "POST",
           body: formData
         });
 
-        const result = await response.json().catch(function () {
-          return {};
-        });
-
         if (!response.ok) {
-          throw new Error(result.error || "Не удалось отправить заявку.");
+          throw new Error("Не удалось отправить заявку.");
         }
 
         form.reset();

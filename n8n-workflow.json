@@ -1,0 +1,227 @@
+{
+  "name": "Landing Page Leads",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "landing-form",
+        "options": {
+          "responseMode": "onReceived",
+          "responseData": "firstEntryJson"
+        }
+      },
+      "id": "a1b2c3d4-0001-0001-0001-000000000001",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "landing-form"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "honeypot-check",
+              "leftValue": "={{ $json.body?.website ?? $json.website ?? '' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0002-0002-0002-000000000002",
+      "name": "Проверка антиспама",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-name",
+              "name": "name",
+              "value": "={{ $json.body?.name ?? $json.name ?? '' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-contact",
+              "name": "contact",
+              "value": "={{ $json.body?.contact ?? $json.contact ?? '' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-company",
+              "name": "company",
+              "value": "={{ $json.body?.company ?? $json.company ?? '—' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-message",
+              "name": "telegramText",
+              "value": "=🔔 Новая заявка с лендинга Smetika\n\n👤 Имя: {{ $json.body?.name ?? $json.name ?? '?' }}\n📞 Контакт: {{ $json.body?.contact ?? $json.contact ?? '?' }}\n🏢 Компания: {{ $json.body?.company ?? $json.company ?? '—' }}\n📎 PDF: {{ $binary?.pdf ? 'прикреплён' : 'нет' }}\n\n🕐 {{ $now.toFormat('dd.MM.yyyy HH:mm') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0003-0003-0003-000000000003",
+      "name": "Форматировать данные",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [680, 200]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $credentials.telegramApi.chatId }}",
+        "text": "={{ $json.telegramText }}",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "disable_web_page_preview": true
+        }
+      },
+      "id": "a1b2c3d4-0004-0004-0004-000000000004",
+      "name": "Telegram: уведомление",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [900, 200],
+      "credentials": {
+        "telegramApi": {
+          "id": "",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "pdf-check",
+              "leftValue": "={{ Object.keys($binary ?? {}).length }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0005-0005-0005-000000000005",
+      "name": "Есть PDF?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1120, 200]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $credentials.telegramApi.chatId }}",
+        "binaryData": true,
+        "binaryProperty": "pdf",
+        "additionalFields": {
+          "caption": "📎 PDF от {{ $('Форматировать данные').item.json.name }} ({{ $('Форматировать данные').item.json.company }})"
+        }
+      },
+      "id": "a1b2c3d4-0006-0006-0006-000000000006",
+      "name": "Telegram: отправить PDF",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1340, 120],
+      "credentials": {
+        "telegramApi": {
+          "id": "",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Проверка антиспама",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Проверка антиспама": {
+      "main": [
+        [
+          {
+            "node": "Форматировать данные",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Форматировать данные": {
+      "main": [
+        [
+          {
+            "node": "Telegram: уведомление",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram: уведомление": {
+      "main": [
+        [
+          {
+            "node": "Есть PDF?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Есть PDF?": {
+      "main": [
+        [
+          {
+            "node": "Telegram: отправить PDF",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-05-09T00:00:00.000Z",
+  "versionId": "1"
+}
