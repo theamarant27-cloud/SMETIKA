@@ -612,6 +612,12 @@
 
       const formData = new FormData(form);
 
+      // Удаляем пустое поле pdf — n8n падает с 500 при парсинге пустого файла
+      const pdfFile = formData.get("pdf");
+      if (!pdfFile || pdfFile.size === 0) {
+        formData.delete("pdf");
+      }
+
       if (submitButton) {
         submitButton.disabled = true;
         submitButton.textContent = "Отправляем...";
