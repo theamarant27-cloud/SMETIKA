@@ -544,6 +544,7 @@
 
     <div data-cta-form-wrap style="max-width:480px;margin:0 auto;">
       <form data-lead-form="" style="background:#FFFFFF;padding:32px;text-align:left;display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" required="" placeholder="Ваше имя" style="width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:15px;padding:14px 16px;border:1px solid rgba(20,23,28,0.2);background:#F7F5EF;color:#14171C;">
         <input type="tel" name="contact" data-contact-input="" required="" placeholder="+7 999 123-45-67" style="width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:15px;padding:14px 16px;border:1px solid rgba(20,23,28,0.2);background:#F7F5EF;color:#14171C;">
         <div class="hidden" data-contact-error="" style="display:none;font-size:12px;color:#C0362C;padding:0 2px;font-family:'IBM Plex Sans',sans-serif;">Введите корректный номер телефона, например +7 999 123-45-67</div>
         <label style="display:flex;align-items:center;gap:10px;padding:14px 16px;border:1px dashed rgba(20,23,28,0.3);cursor:pointer;font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:#7A828C;">
@@ -755,6 +756,7 @@
       var response = await fetch(WEBHOOK_URL, { method: "POST", body: formData });
       if (!response.ok) throw new Error("Не удалось отправить заявку.");
 
+      var leadName = formData.get("name") || "";
       var leadContact = formData.get("contact") || "";
 
       if (submitButton) {
@@ -772,6 +774,7 @@
       if (successText) successText.textContent = "Загружаем файл...";
       try {
         var pdfData = new FormData();
+        pdfData.append("name", leadName);
         pdfData.append("contact", leadContact);
         pdfData.append("pdf", pdfFile);
 
