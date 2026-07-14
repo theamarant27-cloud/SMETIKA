@@ -1,0 +1,29 @@
+# Живой поиск OpenAI (ChatGPT)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Живой поиск Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Поисковый и веб-краулер Anthropic (Claude-Web)
+User-agent: Claude-Web
+Allow: /
+
+# Google Gemini (поисковый ИИ) и Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Яндекс (Поиск и Алиса)
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexAdditional
+Allow: /
+
+# Все остальные краулеры — доступ открыт
+User-agent: *
+Allow: /

@@ -15,6 +15,84 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Smetika — расчёт сметы на отделку за 5 минут по PDF-чертежу</title>
 <meta name="description" content="Загрузите архитектурный PDF — получите готовую смету на потолки, полы, стены, двери, фасады и кровлю через 3–6 минут. Погрешность ±3%. Первый расчёт бесплатно."/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Smetika",
+  "url": "https://smetika.pro/",
+  "description": "Сервис на базе ИИ для автоматического расчёта сметы на отделку (потолки, полы, стены, двери, фасады, кровля) по PDF-чертежу.",
+  "email": "daniil@smetika.pro",
+  "sameAs": ["https://t.me/DAmarketolog"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Smetika",
+  "description": "ИИ-сервис для автоматического расчёта сметы на отделку по PDF-чертежу. Загрузка архитектурного плана — готовая Excel-смета за 3–6 минут, погрешность ±3% относительно ручного расчёта инженера-сметчика.",
+  "brand": { "@type": "Brand", "name": "Smetika" },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Пробный расчёт",
+      "price": "0",
+      "priceCurrency": "RUB",
+      "description": "Один расчёт на реальный объект клиента, полный результат в Excel, без обязательств.",
+      "url": "https://smetika.pro/#pricing"
+    },
+    {
+      "@type": "Offer",
+      "name": "Внедрение под ключ",
+      "price": "300000",
+      "priceCurrency": "RUB",
+      "description": "Установка на изолированном VPS под брендом клиента, корпоративный веб-интерфейс, интеграция с номенклатурой поставщиков.",
+      "url": "https://smetika.pro/#pricing"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какие форматы PDF поддерживаются?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Векторные PDF (из AutoCAD, Revit, ArchiCAD) и сканы высокого разрешения. Листы A0, A1 и меньше, многоэтажные проекты — в одном файле."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Насколько точен расчёт?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Движок валидирован против эталонной сметы профессионального инженера-сметчика. Отклонение по ключевым позициям — в пределах ±3%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужно ли устанавливать программу?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Smetika работает в браузере и в Telegram: открыли — загрузили файл — получили смету."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Безопасны ли наши чертежи?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Система разворачивается на изолированном VPS — файлы обрабатываются в приватной среде, доступ есть только у вас. Готовы подписать NDA до начала работ."
+      }
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -76,6 +154,10 @@
 </header>
 
 <main>
+
+<section class="ai-summary" style="background:#EFEBE1;padding:14px clamp(20px,5vw,64px);border-bottom:1px solid rgba(20,23,28,0.1);">
+  <p style="max-width:1240px;margin:0 auto;font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.6;color:#4B5158;">Smetika — сервис на базе ИИ для автоматического расчёта сметы на отделку (потолки, полы, стены, двери, фасады, кровля) по PDF-чертежу. Загрузите архитектурный план — получите готовую Excel-смету за 3–6 минут с погрешностью ±3% относительно ручного расчёта инженера-сметчика. Подходит подрядчикам по ремонту коммерческих помещений, участникам тендеров и дистрибьюторам отделочных материалов. Пробный расчёт бесплатный, внедрение под ключ — от 300 000 ₽.</p>
+</section>
 
 <!-- HERO -->
 <section style="position:relative;background:#14171C;padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px) clamp(64px,9vw,110px);background-image:linear-gradient(rgba(247,245,239,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(247,245,239,0.05) 1px, transparent 1px);background-size:48px 48px;">
@@ -216,36 +298,47 @@
 <section data-reveal-group style="position:relative;background:#14171C;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);background-image:linear-gradient(rgba(247,245,239,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(247,245,239,0.05) 1px, transparent 1px);background-size:48px 48px;">
   <div style="max-width:1240px;margin:0 auto;">
     <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#F7F5EF;margin:0 0 44px;">В цифрах</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-bottom:40px;">
-      <div class="reveal" data-reveal-item>
-        <div style="display:flex;align-items:baseline;gap:4px;">
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">3–6</span>
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">мин</span>
-        </div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Время расчёта объекта с 150+ помещениями</div>
-      </div>
-      <div class="reveal" data-reveal-item>
-        <div style="display:flex;align-items:baseline;gap:4px;">
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">2–3</span>
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">дня</span>
-        </div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Столько занимал тот же расчёт до Smetika</div>
-      </div>
-      <div class="reveal" data-reveal-item>
-        <div style="display:flex;align-items:baseline;gap:4px;">
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">±3</span>
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">%</span>
-        </div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Погрешность расчёта vs. ручная смета</div>
-      </div>
-      <div class="reveal" data-reveal-item>
-        <div style="display:flex;align-items:baseline;gap:4px;">
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">0</span>
-          <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">₽</span>
-        </div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Стоимость первого расчёта на ваш объект</div>
-      </div>
-    </div>
+    <table style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin:0 0 40px;width:100%;border-collapse:collapse;">
+      <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Ключевые показатели Smetika</caption>
+      <tbody style="display:contents;">
+      <tr class="reveal" data-reveal-item style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="display:flex;align-items:baseline;gap:4px;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">3–6</span>
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">мин</span>
+          </div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Время расчёта объекта с 150+ помещениями</div>
+        </td>
+      </tr>
+      <tr class="reveal" data-reveal-item style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="display:flex;align-items:baseline;gap:4px;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">2–3</span>
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">дня</span>
+          </div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Столько занимал тот же расчёт до Smetika</div>
+        </td>
+      </tr>
+      <tr class="reveal" data-reveal-item style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="display:flex;align-items:baseline;gap:4px;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">±3</span>
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">%</span>
+          </div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Погрешность расчёта vs. ручная смета</div>
+        </td>
+      </tr>
+      <tr class="reveal" data-reveal-item style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="display:flex;align-items:baseline;gap:4px;">
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(38px,5vw,56px);color:var(--accent);line-height:1;">0</span>
+            <span style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:var(--accent);">₽</span>
+          </div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.6);margin-top:8px;line-height:1.4;">Стоимость первого расчёта на ваш объект</div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
     <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.55);max-width:760px;margin:0;border-top:1px solid rgba(247,245,239,0.14);padding-top:28px;">Точность подтверждена: сверили с эталонной сметой, вручную составленной опытным инженером-сметчиком. Расхождение по материалам и объёмам работ — не более 3%.</p>
   </div>
 </section>
@@ -327,7 +420,7 @@
 <!-- FEATURES -->
 <section id="features" style="background:#EFEBE1;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
   <div style="max-width:1240px;margin:0 auto;">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 40px;">Что умеет Smetika</h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 40px;">Что умеет ИИ-сервис Smetika для расчёта смет?</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 32px;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:10px;">01</div>
@@ -364,9 +457,9 @@
 </section>
 
 <!-- ICP -->
-<section style="background:#F7F5EF;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+<section id="who" style="background:#F7F5EF;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
   <div style="max-width:1240px;margin:0 auto;">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 40px;">Smetika создана для вас, если…</h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 40px;">Кому подходит Smetika?</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
       <div class="card-hover" style="background:#FFFFFF;border:1px solid rgba(20,23,28,0.1);padding:28px;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:14px;">01</div>
@@ -390,18 +483,22 @@
 <!-- PRICING -->
 <section id="pricing" style="background:#EFEBE1;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
   <div style="max-width:1240px;margin:0 auto;">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 16px;max-width:760px;">Ваш собственный инструмент в изолированной среде</h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 8px;max-width:760px;">Ваш собственный инструмент в изолированной среде</h2>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.03em;color:var(--accent);margin:0 0 16px;">Сколько стоит внедрение Smetika?</p>
     <p style="font-family:'IBM Plex Sans',sans-serif;font-size:16px;line-height:1.6;color:#4B5158;max-width:680px;margin:0 0 44px;">Smetika разворачивается на изолированном виртуальном сервере (VPS) под вашу компанию. Доступ к данным есть только у вас. Ваш портал и бот — ваш бренд.</p>
 
     <div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div style="flex:1 1 340px;background:#FFFFFF;border:1px solid rgba(20,23,28,0.1);padding:32px;display:flex;flex-direction:column;">
         <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:#14171C;margin:0 0 6px;">Пробный расчёт</h3>
         <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:34px;color:#14171C;margin-bottom:20px;">Бесплатно</div>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;flex:1;">
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#4B5158;"><span style="color:var(--accent);font-weight:700;">✓</span>1 расчёт на ваш реальный объект</div>
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#4B5158;"><span style="color:var(--accent);font-weight:700;">✓</span>Полный результат в Excel</div>
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#4B5158;"><span style="color:var(--accent);font-weight:700;">✓</span>Никаких обязательств</div>
-        </div>
+        <table style="width:100%;border-collapse:separate;border-spacing:0 10px;margin:-10px 0 18px;flex:1;">
+          <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Что входит в тариф «Пробный расчёт»</caption>
+          <tbody>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#4B5158;padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>1 расчёт на ваш реальный объект</td></tr>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#4B5158;padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>Полный результат в Excel</td></tr>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#4B5158;padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>Никаких обязательств</td></tr>
+          </tbody>
+        </table>
         <a href="#cta" style="text-align:center;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:15px;color:#14171C;background:#F7F5EF;border:1px solid rgba(20,23,28,0.2);padding:14px;margin-bottom:10px;">Получить мой бесплатный расчёт</a>
         <p style="text-align:center;font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:#7A828C;margin:0;">Без обязательств. Без регистрации.</p>
       </div>
@@ -411,12 +508,15 @@
         <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:22px;color:#F7F5EF;margin:0 0 6px;">Внедрение под ключ</h3>
         <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:34px;color:#F7F5EF;margin-bottom:4px;">от 300 000 ₽</div>
         <div style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:rgba(247,245,239,0.5);margin-bottom:20px;">единоразово · + инфраструктура ~9 000 ₽/мес · + поддержка 20 000 ₽/мес</div>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;flex:1;">
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);"><span style="color:var(--accent);font-weight:700;">✓</span>Установка на изолированном VPS</div>
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);"><span style="color:var(--accent);font-weight:700;">✓</span>Корпоративный веб-интерфейс</div>
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);"><span style="color:var(--accent);font-weight:700;">✓</span>Настройка каталога под поставщиков</div>
-          <div style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);"><span style="color:var(--accent);font-weight:700;">✓</span>Интеграция с вашей номенклатурой</div>
-        </div>
+        <table style="width:100%;border-collapse:separate;border-spacing:0 10px;margin:-10px 0 18px;flex:1;">
+          <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Что входит в тариф «Внедрение под ключ»</caption>
+          <tbody>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>Установка на изолированном VPS</td></tr>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>Корпоративный веб-интерфейс</td></tr>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>Настройка каталога под поставщиков</td></tr>
+          <tr><td style="display:flex;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:rgba(247,245,239,0.75);padding:0;border:none;"><span style="color:var(--accent);font-weight:700;">✓</span>Интеграция с вашей номенклатурой</td></tr>
+          </tbody>
+        </table>
         <a href="#cta" style="text-align:center;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:15px;color:#14171C;background:var(--accent);padding:14px;">Обсудить моё внедрение</a>
       </div>
     </div>
@@ -428,24 +528,35 @@
   <div style="max-width:1240px;margin:0 auto;">
     <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#F7F5EF;margin:0 0 12px;">Экономика внедрения</h2>
     <p style="font-family:'IBM Plex Sans',sans-serif;font-size:16px;color:rgba(247,245,239,0.65);max-width:640px;margin:0 0 44px;">Стоимость системы 300 000 ₽ — это всего 2 месяца зарплаты одного среднего сметчика.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-bottom:44px;">
-      <div>
-        <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:#F7F5EF;line-height:1;">300 000 ₽</div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">Внедрение — единоразовый платёж</div>
-      </div>
-      <div>
-        <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:#F7F5EF;line-height:1;">125 000 ₽+</div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">ФОТ сметчика — средняя з/п в месяц</div>
-      </div>
-      <div>
-        <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:var(--accent);line-height:1;">в 100 раз</div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">Производительность выше текущей скорости</div>
-      </div>
-      <div>
-        <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:#F7F5EF;line-height:1;">1.5 млн ₽</div>
-        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">Средний контракт — ожидаемая выручка</div>
-      </div>
-    </div>
+    <table style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin:0 0 44px;width:100%;border-collapse:collapse;">
+      <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Экономика внедрения Smetika</caption>
+      <tbody style="display:contents;">
+      <tr style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:#F7F5EF;line-height:1;">300 000 ₽</div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">Внедрение — единоразовый платёж</div>
+        </td>
+      </tr>
+      <tr style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:#F7F5EF;line-height:1;">125 000 ₽+</div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">ФОТ сметчика — средняя з/п в месяц</div>
+        </td>
+      </tr>
+      <tr style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:var(--accent);line-height:1;">в 100 раз</div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">Производительность выше текущей скорости</div>
+        </td>
+      </tr>
+      <tr style="display:contents;">
+        <td style="padding:0;border:none;">
+          <div style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(30px,4vw,42px);color:#F7F5EF;line-height:1;">1.5 млн ₽</div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:rgba(247,245,239,0.55);margin-top:8px;">Средний контракт — ожидаемая выручка</div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
     <div style="border-top:1px solid rgba(247,245,239,0.16);border-bottom:1px solid rgba(247,245,239,0.16);padding:28px 0;">
       <p style="font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;color:rgba(247,245,239,0.85);max-width:820px;margin:0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.06em;color:var(--accent);">ВЫВОД —</span> Smetika работает круглосуточно, не уходит в отпуск и не совершает ошибок из-за усталости. Внедрение окупается в первый же месяц при выигрыше одного дополнительного тендера.</p>
     </div>
