@@ -71,7 +71,7 @@
       "name": "Насколько точен расчёт?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Движок валидирован против эталонной сметы профессионального инженера-сметчика. Отклонение по ключевым позициям - в пределах ±3%."
+        "text": "Движок валидирован против эталонной сметы профессионального инженера-сметчика. Отклонение по ключевым позициям - в пределах ±3% (точность около 97%)."
       }
     },
     {
@@ -88,6 +88,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Система разворачивается на изолированном VPS - файлы обрабатываются в приватной среде, доступ есть только у вас. Готовы подписать NDA до начала работ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что входит в веб-панель, кроме расчёта?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Объекты - в одном месте все расчёты, задачи и акты по конкретному объекту; канбан-доска задач с назначением специалистов; каталог расценок и акты выполненных работ, которые собираются из завершённых задач автоматически. Расчёт по PDF - это то, с чего обычно начинается работа с объектом, а не единственная функция панели."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Задачи по объекту составляются по нормативам или произвольно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для дизайн-проектов система автоматически разворачивает технологическую цепочку работ по СНиП для каждого элемента отделки и связывает шаги зависимостями в канбане, чтобы чистовую задачу нельзя было начать раньше черновой. Задачи для специалистов можно и создать автоматически из расчёта, и добавить вручную."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Акт выполненных работ - это КС-2/КС-3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, акты формируются в формате КС-2/КС-3 из завершённых задач объекта, с ценами из импортированного прайс-листа, и экспортируются в Excel."
       }
     }
   ]
@@ -339,7 +363,7 @@
       </tr>
       </tbody>
     </table>
-    <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.55);max-width:760px;margin:0;border-top:1px solid rgba(247,245,239,0.14);padding-top:28px;">Точность подтверждена: сверили с эталонной сметой, вручную составленной опытным инженером-сметчиком. Расхождение по материалам и объёмам работ - не более 3%.</p>
+    <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.55);max-width:760px;margin:0;border-top:1px solid rgba(247,245,239,0.14);padding-top:28px;">Точность подтверждена: сверили с эталонной сметой, вручную составленной опытным инженером-сметчиком. Расхождение по материалам и объёмам работ - не более 3% (то есть точность около 97%).</p>
   </div>
 </section>
 
@@ -417,6 +441,64 @@
   </div>
 </section>
 
+<!-- OBJECT MANAGEMENT -->
+<section data-reveal-group style="position:relative;background:#14171C;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);background-image:linear-gradient(rgba(247,245,239,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(247,245,239,0.05) 1px, transparent 1px);background-size:48px 48px;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.03em;color:var(--accent);margin:0 0 16px;">НОВОЕ - ИЮЛЬ 2026</p>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#F7F5EF;margin:0 0 16px;max-width:820px;">Смета - только начало. Дальше - весь объект в одной панели.</h2>
+    <p style="font-family:'IBM Plex Sans',sans-serif;font-size:16px;line-height:1.6;color:rgba(247,245,239,0.65);max-width:680px;margin:0 0 44px;">Объект объединяет расчёты, ручные задачи и акт выполненных работ. Не нужно сводить всё это по отдельным таблицам и чатам.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-bottom:36px;">
+      <div class="reveal" data-reveal-item>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:10px;">01</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#F7F5EF;margin:0 0 8px;">Объекты</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.65);margin:0;">Один объект - все расчёты, задачи и акты по нему. Статусы от «Новый» до «Закрыт», отдельная отметка «Объект сдан» - сданные объекты не мешают в рабочих списках.</p>
+      </div>
+      <div class="reveal" data-reveal-item>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:10px;">02</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#F7F5EF;margin:0 0 8px;">Задачи и канбан</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.65);margin:0;">Ручные стройзадачи - отдельно от расчётов, создаются автоматически из расчёта или вручную. Канбан-доска с перетаскиванием, приоритеты, сроки. Для дизайн-проектов система сама выстраивает цепочку задач по СНиП (демонтаж → грунтовка → штукатурка → шпаклевание) и не даёт начать чистовую работу раньше черновой. Повторный импорт не плодит дубли.</p>
+      </div>
+      <div class="reveal" data-reveal-item>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:10px;">03</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#F7F5EF;margin:0 0 8px;">Специалисты</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.65);margin:0;">Профиль специалиста - какие объекты, какие категории работ. Система сама предлагает подходящего исполнителя с учётом его текущей загрузки; перетащить вручную можно всегда.</p>
+      </div>
+      <div class="reveal" data-reveal-item>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:10px;">04</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#F7F5EF;margin:0 0 8px;">Акты КС-2/КС-3 и расценки</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.65);margin:0;">Импортируйте свой прайс-лист (CSV/XLSX) - и акт выполненных работ КС-2/КС-3 соберётся из завершённых задач в один клик, с ценами, и экспортируется в Excel.</p>
+      </div>
+    </div>
+    <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:rgba(247,245,239,0.55);max-width:760px;margin:0;border-top:1px solid rgba(247,245,239,0.14);padding-top:28px;">Многопользовательский доступ с ролями «администратор» и «сметчик» - каждый сотрудник видит и делает ровно то, что ему положено.</p>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" data-reveal-group style="background:#F7F5EF;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+  <div style="max-width:1240px;margin:0 auto;">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.03em;color:var(--accent);margin:0 0 16px;">В РАЗРАБОТКЕ</p>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);color:#14171C;margin:0 0 16px;max-width:700px;">Что дальше</h2>
+    <p style="font-family:'IBM Plex Sans',sans-serif;font-size:16px;line-height:1.6;color:#4B5158;max-width:640px;margin:0 0 40px;">Smetika не останавливается на смете и акте. Вот что мы уже делаем следующим - явно помечено «скоро», чтобы не путать с тем, что уже работает выше.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div class="reveal card-hover" data-reveal-item style="background:#FFFFFF;border:1px dashed rgba(20,23,28,0.25);padding:28px;">
+        <div style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.05em;color:var(--accent);background:rgba(0,0,0,0.05);padding:4px 10px;margin-bottom:14px;">СКОРО</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#14171C;margin:0 0 10px;">AI-ассистент «Спроси у сметы»</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0;">Вопрос на обычном языке вместо навигации по Excel и панели - «сколько плитки заказано на 3 этаж», «какие задачи просрочены у Иванова».</p>
+      </div>
+      <div class="reveal card-hover" data-reveal-item style="background:#FFFFFF;border:1px dashed rgba(20,23,28,0.25);padding:28px;">
+        <div style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.05em;color:var(--accent);background:rgba(0,0,0,0.05);padding:4px 10px;margin-bottom:14px;">СКОРО</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#14171C;margin:0 0 10px;">Фотофиксация + LLM-приёмка</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0;">Фото хода работ с объекта - и автоматическая проверка этапа через ИИ, без выезда прораба на каждую мелочь.</p>
+      </div>
+      <div class="reveal card-hover" data-reveal-item style="background:#FFFFFF;border:1px dashed rgba(20,23,28,0.25);padding:28px;">
+        <div style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.05em;color:var(--accent);background:rgba(0,0,0,0.05);padding:4px 10px;margin-bottom:14px;">СКОРО</div>
+        <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#14171C;margin:0 0 10px;">OCR-сверка чеков и накладных</h3>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0;">Сфотографировали чек или накладную - система сама сверяет позиции со сметой, без ручного сопоставления.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURES -->
 <section id="features" style="background:#EFEBE1;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
   <div style="max-width:1240px;margin:0 auto;">
@@ -474,7 +556,7 @@
       <div class="card-hover" style="background:#FFFFFF;border:1px solid rgba(20,23,28,0.1);padding:28px;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:14px;">03</div>
         <h3 style="font-family:'Oswald',sans-serif;font-weight:800;font-size:19px;color:#14171C;margin:0 0 10px;">Вы - дистрибьютор материалов</h3>
-        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0;">Большой поток запросов, каждый клиент хочет расчёт «прямо сейчас». Smetika обрабатывает любое число объектов параллельно без увеличения штата.</p>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0;">Большой поток запросов, каждый клиент хочет расчёт «прямо сейчас». Smetika считает объект за минуты, а не дни - а в веб-панели вы одновременно ведёте любое число объектов и задач, без увеличения штата.</p>
       </div>
     </div>
   </div>
@@ -619,7 +701,7 @@
           <span class="faq-toggle" data-faq-icon style="flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--accent);transform:rotate(0deg);">+</span>
         </button>
         <div class="faq-answer" data-faq-answer style="max-height:0px;opacity:0;">
-          <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0 0 22px;max-width:680px;">Движок валидирован против эталонной сметы профессионального инженера-сметчика. Отклонение по ключевым позициям - в пределах ±3%.</p>
+          <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0 0 22px;max-width:680px;">Движок валидирован против эталонной сметы профессионального инженера-сметчика. Отклонение по ключевым позициям - в пределах ±3% (точность около 97%).</p>
         </div>
       </div>
 
@@ -640,6 +722,36 @@
         </button>
         <div class="faq-answer" data-faq-answer style="max-height:0px;opacity:0;">
           <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0 0 22px;max-width:680px;">Система разворачивается на изолированном VPS - файлы обрабатываются в приватной среде, доступ есть только у вас. Готовы подписать NDA до начала работ.</p>
+        </div>
+      </div>
+
+      <div style="border-bottom:1px solid rgba(20,23,28,0.14);" data-faq-item>
+        <button data-faq-toggle aria-expanded="false" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;cursor:pointer;">
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:17px;color:#14171C;text-align:left;">Что входит в веб-панель, кроме расчёта?</span>
+          <span class="faq-toggle" data-faq-icon style="flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--accent);transform:rotate(0deg);">+</span>
+        </button>
+        <div class="faq-answer" data-faq-answer style="max-height:0px;opacity:0;">
+          <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0 0 22px;max-width:680px;">Объекты - в одном месте все расчёты, задачи и акты по конкретному объекту; канбан-доска задач с назначением специалистов; каталог расценок и акты выполненных работ, которые собираются из завершённых задач автоматически. Расчёт по PDF - это то, с чего обычно начинается работа с объектом, а не единственная функция панели.</p>
+        </div>
+      </div>
+
+      <div style="border-bottom:1px solid rgba(20,23,28,0.14);" data-faq-item>
+        <button data-faq-toggle aria-expanded="false" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;cursor:pointer;">
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:17px;color:#14171C;text-align:left;">Задачи по объекту составляются по нормативам или произвольно?</span>
+          <span class="faq-toggle" data-faq-icon style="flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--accent);transform:rotate(0deg);">+</span>
+        </button>
+        <div class="faq-answer" data-faq-answer style="max-height:0px;opacity:0;">
+          <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0 0 22px;max-width:680px;">Для дизайн-проектов система автоматически разворачивает технологическую цепочку работ по СНиП для каждого элемента отделки (например: демонтаж старого покрытия → грунтовка → штукатурка по маякам → шпаклевание → грунтовка под окраску) и связывает шаги зависимостями в канбане, чтобы чистовую задачу нельзя было начать раньше черновой. Задачи для специалистов при этом можно и создать автоматически из расчёта, и добавить вручную в любой момент.</p>
+        </div>
+      </div>
+
+      <div style="border-bottom:1px solid rgba(20,23,28,0.14);" data-faq-item>
+        <button data-faq-toggle aria-expanded="false" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;cursor:pointer;">
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:17px;color:#14171C;text-align:left;">Акт выполненных работ - это КС-2/КС-3?</span>
+          <span class="faq-toggle" data-faq-icon style="flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--accent);transform:rotate(0deg);">+</span>
+        </button>
+        <div class="faq-answer" data-faq-answer style="max-height:0px;opacity:0;">
+          <p style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.6;color:#4B5158;margin:0 0 22px;max-width:680px;">Да, акты формируются в формате КС-2/КС-3 из завершённых задач объекта, с ценами из вашего импортированного прайс-листа, и экспортируются в Excel.</p>
         </div>
       </div>
 
